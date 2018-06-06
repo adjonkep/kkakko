@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="//kkakko.com/uploads/site_favicon.png">
 
-    <title>KkaKko - Reinventin Package Delivery</title>
+    <title>KkaKko - Reinventing Package Delivery</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +40,7 @@
       <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
-            <img class="mini-logo" src="img/kkakko_logo4.png" width="30" height="30"></img>
+            <img class="mini-logo" src="img/kkakko_logo4.jpg" width="30" height="30"></img>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
