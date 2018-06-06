@@ -40,7 +40,7 @@
       <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
-            <img class="mini-logo" src="img/kkakko_logo3.png" width="20" height="20"></img>
+            <img class="mini-logo" src="img/kkakko_logo3.png" width="20" height="25"></img>
             <strong>kkakko</strong>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +55,7 @@
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">KKAKKO</h1>
-          <p class="lead text-muted">Bienvenue Sur KKaKKO, votre nouvelle facon d'expedier couriers et petits colis dans le monde a moindre cout.</p>
+          <p class="lead text-muted">Bienvenue Sur KKaKKo, votre nouvelle facon d'expedier couriers et petits colis dans le monde a moindre cout.</p>
           <p><h2>I want to Send a</h2></p>
           <p>
             <a href="#" class="btn btn-primary my-2">Parcel</a>
