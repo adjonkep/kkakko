@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="//kkakko.com/uploads/site_favicon.png">
 
-    <title>KkaKko - Reinventing Package Delivery</title>
+    <title>KkaKko - Reinventing International Delivery</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
