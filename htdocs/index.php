@@ -40,7 +40,7 @@
       <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
-            <img class="mini-logo" data-src="img/kkakko_logo3.png" width="20" height="20"></img>
+            <img class="mini-logo" src="img/kkakko_logo3.png" width="20" height="20"></img>
             <strong>kkakko</strong>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
