@@ -139,25 +139,7 @@
         <p class="float-right">
           <a href="#">Back to top</a>
         </p>
-        <?php
-          $servername = "localhost";
-          $username = "root";
-          $password = "11QV8uzrYYar";
-
-        try {
-            $conn = new PDO("mysql:host=$servername;dbname=kkakko", $username, $password);
-            // set the PDO error mode to exception
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-            echo "Connected successfully"; 
-            $data = $conn->query('SELECT LastName FROM employee');
-            $result = $data->fetchColumn();
-            }
-        catch(PDOException $e)
-            {
-            echo "Connection failed: " . $e->getMessage();
-            }
-        ?>
-        <p>Designed by <?php echo $result; ?></p>
+        <p>Designed by <?php include 'pdo.php'; echo $result; ?></p>
       </div>
     </footer>
 
