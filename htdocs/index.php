@@ -141,7 +141,7 @@
         </p>
         <?php
           $myPDO = new PDO('mysql:host=localhost;dbname=kkakko', 'root', '11QV8uzrYYar');
-          $result = $myPDO->query("SELECT Lastname FROM employees");
+          $result = $myPDO->query("SELECT Lastname FROM employee");
         ?>
         <p>Designed by <?php echo $result; ?></p>
       </div>
