@@ -149,7 +149,8 @@
             // set the PDO error mode to exception
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
             echo "Connected successfully"; 
-            $result = $conn->query("SELECT LastName FROM employee");
+            $data = $conn->query('SELECT LastName FROM employee');
+            $result = $data->fetchAll(PDO::FETCH_ASSOC);
             }
         catch(PDOException $e)
             {
