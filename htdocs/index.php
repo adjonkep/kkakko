@@ -150,7 +150,7 @@
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
             echo "Connected successfully"; 
             $data = $conn->query('SELECT LastName FROM employee');
-            $result = $data->fetchAll(PDO::FETCH_ASSOC);
+            $result = $data->fetchColumn();
             }
         catch(PDOException $e)
             {
