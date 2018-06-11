@@ -139,7 +139,8 @@
         <p class="float-right">
           <a href="#">Back to top</a>
         </p>
-        <p>Designed by <?php include 'pdo.php'; echo $result; ?></p>
+        <p>Designed by <?php require 'pdo.php'; 
+        echo $result; ?></p>
       </div>
     </footer>
 
