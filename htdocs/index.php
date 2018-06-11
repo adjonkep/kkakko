@@ -141,7 +141,7 @@
         </p>
         <?php
           $servername = "localhost";
-          $username = "roo";
+          $username = "root";
           $password = "11QV8uzrYYar";
 
         try {
