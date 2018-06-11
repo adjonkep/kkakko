@@ -139,7 +139,11 @@
         <p class="float-right">
           <a href="#">Back to top</a>
         </p>
-        <p></p>
+        <?php
+          $myPDO = new PDO('mysql:host=localhost;dbname=kkakko', 'root', '11QV8uzrYYar');
+          $result = $myPDO->query("SELECT Lastname FROM employees");
+        ?>
+        <p>Designed by <?php echo $result; ?></p>
       </div>
     </footer>
 
