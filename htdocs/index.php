@@ -67,7 +67,7 @@
         <div class="container">
 
           <div class="row">
-            <div class="col-md-4">
+            <span class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
@@ -81,8 +81,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4">
+            </span>
+            <span class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
@@ -96,8 +96,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4">
+            </span>
+            <span class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
@@ -111,9 +111,9 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </span>
 
-            <div class="col-md-4">
+            <span class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <div class="card-body">
@@ -127,7 +127,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </span>
           </div>
         </div>
       </div>
