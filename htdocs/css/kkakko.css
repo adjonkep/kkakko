@@ -26,6 +26,10 @@
   .jumbotron .container {
     max-width: 40rem;
   }
+
+  .album .row{
+    position: relative;
+  }
   
   footer {
     padding-top: 3rem;
