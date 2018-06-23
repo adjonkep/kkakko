@@ -53,8 +53,19 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">KKAKKO</h1>
-          <p class="lead text-muted">Bienvenue Sur KKaKKo, votre nouvelle facon d'expedier couriers et petits colis dans le monde a moindre cout.</p>
+          <div class="teaser">
+              <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                      <h1>Bienvenue<br /> sur <span class="text-warning" style="color:#48BA46;">KkakKo</span></h1>
+
+                      <h2>Votre nouvelle fa&ccedil;on d&#39;exp&eacute;dier<br /> courriers et petits colis &agrave; travers le monde.</h2>
+                    </div>
+
+                    <div class="col-sm-6"><img alt="KkakKo Logo" class="img-responsive" src="https://kkakko.com/uploads/k/kroneldo28/4a55342387.png" /></div>
+                    </div>
+                </div>
+            </div>
           <p><h2>I want to Send a</h2></p>
           <p>
             <a href="#" class="btn btn-primary my-2">Parcel</a>
@@ -135,8 +146,8 @@
         <p class="float-right">
           <a href="#">Back to top</a>
         </p>
-        <p>Designed by <?php require 'pdo.php'; 
-        echo $result; ?></p>
+        <p>Designed by <?php require 'pdo.php';
+echo $result;?></p>
       </div>
     </footer>
 
