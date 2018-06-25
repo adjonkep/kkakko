@@ -45,3 +45,9 @@
   }
   
   .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+  /* Let's make the logo responsive */
+  .img-responsive{
+    max-width: 100%;
+  }
+  
