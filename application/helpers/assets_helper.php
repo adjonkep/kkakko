@@ -3,6 +3,8 @@
  * Method to load css files into your project.
  * @param array $css
  */
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 if ( ! function_exists('load_css'))
 {
     function load_css($css)
