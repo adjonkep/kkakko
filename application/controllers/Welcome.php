@@ -23,5 +23,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 		$this->data['js'] = load_js('bootstrap.min');
 		$this->data['css'] = load_css(['bootstrap.min', 'kkakko']);
+		$this->render();
 	}
 }
