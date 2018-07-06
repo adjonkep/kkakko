@@ -12,10 +12,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>KkaKko - Reinventing International Delivery</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" media="all" rel="stylesheet" type="text/css" />
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo base_url('assets/css/kkakko.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/kkakko.css'); ?>" media="all" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
