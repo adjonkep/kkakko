@@ -81,6 +81,15 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <h1>Rapide</h1>
+                <div class="card-body">
+                  <p class="card-text">Votre colis est livr&eacute; &agrave; destination dans les plus brefs d&eacute;lais</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
                 <h1>S&ucirc;r</h1>
                 <div class="card-body">
                   <p class="card-text">Votre colis est livré à destination dans les plus brefs délais.</p>
@@ -102,15 +111,6 @@ defined('BASEPATH') or exit('No direct script access allowed');?>
                 <h1>&Eacute;conomique</h1>
                 <div class="card-body">
                   <p class="card-text">Payez jusque 3 fois moins cher par rapport &agrave; la concurrence.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <h1>Rapide</h1>
-                <div class="card-body">
-                  <p class="card-text">Votre colis est livr&eacute; &agrave; destination dans les plus brefs d&eacute;lais</p>
                 </div>
               </div>
             </div>
