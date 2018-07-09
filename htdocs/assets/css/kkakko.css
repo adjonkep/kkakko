@@ -24,7 +24,7 @@
   }
   
   .col-md-4 {
-    max-width: 40rem;
+    max-width: 50%;
     display: -webkit-flex;
     -webkit-align-items: center;
     display: flex;
