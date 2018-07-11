@@ -30,7 +30,7 @@
   }
 
   .container{
-    background-image: url(images/web_0105.png)
+    background-image: url('images/web_0105.png')
   }
 
   .album .row{
@@ -38,7 +38,7 @@
   }
 
   .card.mb-4.box-shadow{
-    width: 40rem;
+    width: 500px;
   }
   
   footer {
