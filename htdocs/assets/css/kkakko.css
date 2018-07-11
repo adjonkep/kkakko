@@ -1,13 +1,6 @@
 :root {
     --jumbotron-padding-y: 3rem;
   }
-  .bg { 
-    background-image: url("images/web_0105.png");
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
   
   .jumbotron {
     padding-top: var(--jumbotron-padding-y);
@@ -36,11 +29,15 @@
     align-items: stretch;
   }
 
+  .container{
+    background-image: url(images/web_0105.png)
+  }
+
   .album .row{
     position: relative;
   }
 
-  .card .mb-4 .box-shadow{
+  .card.mb-4.box-shadow{
     width: 40rem;
   }
   
