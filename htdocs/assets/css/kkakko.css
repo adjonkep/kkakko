@@ -40,7 +40,7 @@
     position: relative;
   }
 
-  .card mb-4 box-shadow{
+  card{
     width: 40rem;
   }
   
