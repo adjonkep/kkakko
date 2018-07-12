@@ -23,13 +23,6 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <header>
     </header>
 
-    <main role="main">
-
-      <section class="jumbotron text-center">
-      </section>
-
-    </main>
-
     <footer class="text-muted">
     </footer>
 
