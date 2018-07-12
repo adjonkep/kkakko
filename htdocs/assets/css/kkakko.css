@@ -1,19 +1,11 @@
-body, html {
-  height: 100%;
-}
-
-.bg { 
-  /* The image used */
-  background-image: url("../images/web_0204.png");
-
-  /* Full height */
-  height: 100%;
-  max-width: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
+html { 
+  background: url("../images/web_0204.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
+
+
   
   
