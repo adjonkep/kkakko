@@ -21,69 +21,16 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
   <body>
 
     <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-muted">some information about us</p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                <li><a href="#" class="text-white">Like on Facebook</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <strong>kkakko</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
     </header>
 
     <main role="main">
 
       <section class="jumbotron text-center">
-        <div class="container">
-          <div class="teaser">
-              <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                      <h1>Bienvenue<br /> sur <span class="text-warning" style="color:#48BA46;">KkakKo</span></h1>
-
-                      <h2>Votre nouvelle fa&ccedil;on d&#39;exp&eacute;dier<br /> courriers et petits colis &agrave; travers le monde.</h2>
-                    </div>
-
-                    <div class="col-sm-6"><img alt="KkakKo Logo" class="img-responsive" src="https://kkakko.com/uploads/k/kroneldo28/4a55342387.png" /></div>
-                    </div>
-                </div>
-            </div>
-          <p><h2>I want to Send a</h2></p>
-          <p>
-            <a href="#" class="btn btn-primary my-2">Parcel</a>
-            <a href="#" class="btn btn-secondary my-2">Courier</a>
-          </p>
-        </div>
       </section>
 
     </main>
 
     <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-      </div>
     </footer>
 
     <!-- Bootstrap core JavaScript
