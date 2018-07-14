@@ -22,18 +22,6 @@
   .jumbotron-heading {
     font-weight: 300;
   }
-  
-  .col-md-4 {
-    display: -webkit-flex;
-    width: 80rem;
-    -webkit-align-items: center;
-    align-items: stretch;
-    opacity: 1;
-  }
-
-  .container-body{
-    background: url('../images/web_0105.png')
-  }
 
   .album .row{
     position: relative;
