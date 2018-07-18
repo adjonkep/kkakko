@@ -9,7 +9,7 @@ class Send extends CI_Controller {
 	   }
 	public function index()
 	{
-		$this->data['info'] = $this->SendingModel->getInfo();
+		$this->data['infos'] = $this->SendingModel->getInfo();
 		$this->load->view('send');
 	}
 }
