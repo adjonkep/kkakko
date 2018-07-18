@@ -9,3 +9,13 @@ html {
     background-size: cover;
   }
 }
+
+.logo {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.header-util {
+  float: right
+}
