@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
      <?php foreach($infos as $info){?>
      <tr>
          <td><?php echo $info->cityName;?></td>
-         <td><?php echo $post->country;?></td>
+         <td><?php echo $info->country;?></td>
       </tr>     
      <?php }?>  
    </table>
