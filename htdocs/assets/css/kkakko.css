@@ -9,6 +9,12 @@ html {
     background-size: cover;
   }
 }
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
 .logo{
   display: block;
 }

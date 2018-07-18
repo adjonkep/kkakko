@@ -20,8 +20,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
   <body>
     <header>
-      <div class="head">
-        <div class=logo>
+      <div class="topnav">
+        <div class="logo">
           <a href="#">
             <img src="<?php echo base_url(); ?>assets/images/kkakko-logos-12.png">
           </a>
