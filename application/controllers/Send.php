@@ -10,6 +10,6 @@ class Send extends CI_Controller {
 	public function index()
 	{
 		$this->data['infos'] = $this->SendingModel->getInfo();
-		$this->load->view('send');
+		$this->load->view('send', $this->data);
 	}
 }
