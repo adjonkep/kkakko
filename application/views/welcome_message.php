@@ -20,14 +20,16 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
   <body>
     <header>
-      <div class=logo>
-        <a href="#">
-          <img src="<?php echo base_url(); ?>assets/images/kkakko-logos-12.png">
-        </a>
-      </div>
-      <div class="header-util">
-        <button class="w3-button">Login</button>
-        <button class="w3-button">Register</button>
+      <div class="head">
+        <div class=logo>
+          <a href="#">
+            <img src="<?php echo base_url(); ?>assets/images/kkakko-logos-12.png">
+          </a>
+        </div>
+        <div class="header-util">
+          <button class="w3-button">Login</button>
+          <button class="w3-button">Register</button>
+        </div>
       </div>
     </header>
     <section>
