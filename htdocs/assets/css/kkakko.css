@@ -12,12 +12,10 @@ html {
 
 .topnav {
   background-color: #333;
+  display: block;
   overflow: hidden;
 }
 
-.logo{
-  display: block;
-}
 
 img {
   width: 140px;
