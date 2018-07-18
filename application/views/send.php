@@ -25,6 +25,20 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <div id ="app">
         <h2>{{ product }} workflow.</h2>
     </div>
+
+    <h4>Display Records From Database Using Codeigniter</h4>
+    <table>
+     <tr>
+      <td><strong>City Offered</strong></td>
+      <td><strong>Countries</strong></td>
+    </tr> 
+     <?php foreach($infos as $info){?>
+     <tr>
+         <td><?php echo $info->cityName;?></td>
+         <td><?php echo $post->country;?></td>
+      </tr>     
+     <?php }?>  
+   </table>
     <footer class="text-muted">
     </footer>
 
