@@ -40,8 +40,11 @@ footer {
   background-color: #333;
   display: block;
   overflow: hidden;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-.foot-left {
-  float: right;
+.foot-left p{
+  float: left;
+  color: whitesmoke;
 }
