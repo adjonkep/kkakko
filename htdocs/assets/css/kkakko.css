@@ -22,7 +22,7 @@ img {
   float: left;
 }
 
-.topnav .header-util {
+#header-util {
   float: right;
   vertical-align: middle;
 }
