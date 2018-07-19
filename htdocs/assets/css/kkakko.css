@@ -45,15 +45,12 @@ button {
 footer {
   background-color: #333;
   overflow: hidden;
-  position:absolute;
+  position: absolute;
   bottom:0;
-  width: 100%;
-}
-
-.footer-container {
   width: 100%;
   display: inline-table;
 }
+
 
 .footer-left p {
   float: left;
@@ -80,7 +77,7 @@ footer {
 }
 
 .footer-icon {
-  float: center;
+  width: 50%;
   vertical-align: top;
   color: whitesmoke;
   position: relative;

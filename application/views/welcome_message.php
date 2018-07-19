@@ -36,24 +36,22 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <section>
     </section>
     <footer>
-      <div class="footer-container">
-        <div class="footer-left">
-          <p><a>The Journey of kkakko</a></p>
-          <p><a>About Us</a></p>
-          <p><a>Contact Us</a></p>
-          <p><a>The Contract</a></p>
-          <p><a>The Pricing</a></p>
-        </div>
-        <div class="footer-icon">
-          <i class="fab fa-twitter" href="#"></i>
-          <i class="fab fa-facebook" href="#"></i>
-          <i class="fab fa-google-plus-g" href="#"></i>
-        </div>
-        <div class="footer-right">
-          <p><a>F.A.Q</a></p>
-          <p><a>Privacy</a></p>
-          <p><a>Terms and Conditions</a></p>
-        </div>
+      <div class="footer-left">
+        <p><a>The Journey of kkakko</a></p>
+        <p><a>About Us</a></p>
+        <p><a>Contact Us</a></p>          
+        <p><a>The Contract</a></p>
+        <p><a>The Pricing</a></p>
+      </div>
+      <div class="footer-icon">
+        <i class="fab fa-twitter" href="#"></i>
+        <i class="fab fa-facebook" href="#"></i>
+        <i class="fab fa-google-plus-g" href="#"></i>
+      </div>
+      <div class="footer-right">
+        <p><a>F.A.Q</a></p>
+        <p><a>Privacy</a></p>
+        <p><a>Terms and Conditions</a></p>
       </div>
     </footer>
 
