@@ -15,6 +15,7 @@ html {
   display: inline-grid;
   overflow: hidden;
   position: absolute;
+  width: 100%;
 }
 
 img {
