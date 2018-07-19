@@ -12,8 +12,9 @@ html {
 
 .topnav {
   background-color: #333;
-  display: inline-table;
+  display: inline-grid;
   overflow: hidden;
+  position: absolute;
 }
 
 img {
@@ -38,10 +39,8 @@ button {
 
 footer {
   background-color: #333;
-  display: inline-table;
+  display: inline-grid;
   overflow: hidden;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   position:absolute;
   bottom:0;
   width: 100%;
@@ -75,4 +74,5 @@ footer {
   float: center;
   vertical-align: top;
   color: whitesmoke;
+  position: relative;
 }
