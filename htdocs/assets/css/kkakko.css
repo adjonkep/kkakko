@@ -35,3 +35,13 @@ button {
   text-decoration: none;
   font-size: 16px;
 }
+
+footer {
+  background-color: #333;
+  display: block;
+  overflow: hidden;
+}
+
+.foot-left {
+  float: right;
+}

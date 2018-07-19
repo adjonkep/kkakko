@@ -34,7 +34,16 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     </header>
     <section>
     </section>
-    <footer class="text-muted">
+    <footer>
+      <div>
+        <div class="foot-left">
+          <a>The Journey of kkakko</a>
+          <a>About Us</a>
+          <a>Contact Us</a>
+          <a>The Contract</a>
+          <a>The Pricing</a>
+        </div>
+      </div>
     </footer>
 
     <!-- Bootstrap core JavaScript
