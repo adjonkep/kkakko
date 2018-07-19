@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <section>
     </section>
     <footer>
-      <div>
+      <div class="footer-container">
         <div class="footer-left">
           <p><a>The Journey of kkakko</a></p>
           <p><a>About Us</a></p>
