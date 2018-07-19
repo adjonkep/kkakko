@@ -12,7 +12,7 @@ html {
 
 .topnav {
   background-color: #333;
-  display: block;
+  display: inline-table;
   overflow: hidden;
 }
 
@@ -38,7 +38,7 @@ button {
 
 footer {
   background-color: #333;
-  display: block;
+  display: inline-table;
   overflow: hidden;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -74,5 +74,5 @@ footer {
 .footer-icon {
   float: center;
   vertical-align: top;
-  color: blue;
+  color: whitesmoke;
 }
