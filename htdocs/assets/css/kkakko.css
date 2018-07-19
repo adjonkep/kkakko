@@ -24,7 +24,7 @@ img {
 
 .topnav .header-util {
   float: right;
-  line-height: 50%;
+  vertical-align: middle;
 }
 
 button {
