@@ -13,7 +13,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css"  >
-
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/kkakko.css" >
   </head>
@@ -36,12 +37,22 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     </section>
     <footer>
       <div>
-        <div class="foot-left">
+        <div class="footer-left">
           <p><a>The Journey of kkakko</a></p>
           <p><a>About Us</a></p>
           <p><a>Contact Us</a></p>
           <p><a>The Contract</a></p>
           <p><a>The Pricing</a></p>
+        </div>
+        <div class="footer-icon">
+          <i class="fa fa-twitter-circle" title="" target="_blank" href="#"></i>
+          <i class="fa fa-facebook" title="" target="_blank" href="#"></i>
+          <i class="fab fa-google-plus-g"></i>
+        </div>
+        <div class="footer-right">
+          <p><a>F.A.Q</a></p>
+          <p><a>Privacy</a></p>
+          <p><a>Terms and Conditions</a></p>
         </div>
       </div>
     </footer>
