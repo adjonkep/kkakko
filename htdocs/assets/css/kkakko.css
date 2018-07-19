@@ -42,9 +42,12 @@ footer {
   overflow: hidden;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  position:absolute;
+  bottom:0;
 }
 
 .foot-left p{
   float: left;
   color: whitesmoke;
+  margin-bottom: .25rem;
 }
