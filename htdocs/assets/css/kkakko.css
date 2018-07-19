@@ -22,9 +22,9 @@ img {
   float: left;
 }
 
-#header-util {
+.topnav .header-util {
   float: right;
-  vertical-align: middle;
+  line-height: 50%;
 }
 
 button {
