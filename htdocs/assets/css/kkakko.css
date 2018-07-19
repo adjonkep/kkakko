@@ -10,9 +10,13 @@ html {
   }
 }
 
+header{
+  width: 100%;
+}
+
 .topnav {
   background-color: #333;
-  display: inline-grid;
+  display: inline-table;
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -47,7 +51,8 @@ footer {
 }
 
 .footer-container {
-  display: inline-grid;
+  width: 100%;
+  display: inline-table;
 }
 
 .footer-left p {
