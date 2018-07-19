@@ -44,10 +44,12 @@ footer {
   padding-bottom: 3rem;
   position:absolute;
   bottom:0;
+  width: 100%;
 }
 
 .foot-left p{
   float: left;
   color: whitesmoke;
-  margin-left: .25rem;
+  font-size: 15px;
+  margin-right: 10px;
 }
