@@ -55,7 +55,7 @@ footer {
   vertical-align: top;
 }
 
-.footer-left p a {
+.footer-left p {
   text-decoration: underline;
 }
 
@@ -74,4 +74,5 @@ footer {
 .footer-icon {
   float: center;
   vertical-align: top;
+  color: blue;
 }
