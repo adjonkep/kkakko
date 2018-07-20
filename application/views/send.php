@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <header>
     </header>
     <div id ="app">
-        <h2>{{ product }} are in stock.</h2>
+        <h2>{{ product }} workflow.</h2>
     </div>
     <footer class="text-muted">
     </footer>
@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       const app = new Vue({
           el: '#app',
           data: { 
-              product: 'Boots'
+              product: 'spaghetti'
           }
       })
     </script>
