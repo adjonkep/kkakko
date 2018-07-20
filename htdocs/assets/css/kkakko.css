@@ -55,9 +55,10 @@ footer {
 .footer-left {
   float: left;
   color: whitesmoke;
-  font-size: 15px;
+  font-size: 10px;
   vertical-align: top;
   width: 33.3%;
+  position: fixed;
   overflow: auto;
 }
 
@@ -68,9 +69,10 @@ footer {
 .footer-right {
   float: right;
   color: whitesmoke;
-  font-size: 15px;
+  font-size: 10px;
   vertical-align: top;
   width: 33.3%;
+  position: fixed;
   overflow: auto;
 }
 
@@ -81,7 +83,7 @@ footer {
 .footer-icon {
   vertical-align: top;
   color: whitesmoke;
-  position: relative;
+  position: fixed;
   width: 33.4%;
 }
 
