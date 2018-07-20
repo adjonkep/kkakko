@@ -36,6 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <section>
     </section>
     <footer>
+      <div class="footer-div">
       <div class="footer-left">
         <p><a>The Journey of kkakko</a></p>
         <p><a>About Us</a></p>
@@ -52,6 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         <p><a>F.A.Q</a></p>
         <p><a>Privacy</a></p>
         <p><a>Terms and Conditions</a></p>
+      </div>
       </div>
     </footer>
 
