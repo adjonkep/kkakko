@@ -30,7 +30,6 @@ img {
 
 .topnav .header-util {
   float: right;
-  vertical-align: bottom;
 }
 
 button {
@@ -48,7 +47,6 @@ footer {
   position: absolute;
   bottom:0;
   width: 100%;
-  display: inline-block;
 }
 
 
@@ -57,7 +55,6 @@ footer {
   color: whitesmoke;
   font-size: 10px;
   vertical-align: top;
-  width: 33.3%;
   overflow: auto;
   position: relative;
 }
@@ -71,10 +68,8 @@ footer {
   color: whitesmoke;
   font-size: 10px;
   vertical-align: top;
-  width: 33.3%;
   overflow: auto;
   position: relative;
-  z-index: -1;
 }
 
 .footer-right p {
@@ -84,7 +79,6 @@ footer {
 .footer-icon {
   vertical-align: top;
   color: whitesmoke;
-  width: 33.4%;
   position: relative;
 }
 
