@@ -51,12 +51,12 @@ footer {
 
 
 .footer-left {
-  float: left;
   color: whitesmoke;
   font-size: 10px;
   vertical-align: top;
   overflow: auto;
   position: relative;
+  display: inline;
 }
 
 .footer-left p {
@@ -64,7 +64,7 @@ footer {
 }
 
 .footer-right {
-  float: right;
+  display: inline;
   color: whitesmoke;
   font-size: 10px;
   vertical-align: top;
