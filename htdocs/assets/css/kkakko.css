@@ -50,6 +50,10 @@ footer {
   width: 100%;
 }
 
+.footer-div {
+  display: inline;
+}
+
 
 .footer-left {
   color: whitesmoke;
@@ -57,7 +61,6 @@ footer {
   vertical-align: top;
   overflow: auto;
   position: relative;
-  left: 0;
 }
 
 .footer-left p {
@@ -65,7 +68,6 @@ footer {
 }
 
 .footer-right {
-  right: 0;
   color: whitesmoke;
   font-size: 10px;
   vertical-align: top;
