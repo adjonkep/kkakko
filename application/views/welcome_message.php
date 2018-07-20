@@ -45,10 +45,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         <p><a>The Pricing</a></p>
       </div>
       <div class="footer-icon">
-        <i class="fab fa-twitter" href="http://twitter.kkakko.com"></i>
-        <i class="fab fa-facebook" href="http://facebook.kkakko.com"></i>
-        <i class="fab fa-linkedin" href="http://linkedin.kkakko.com"></i>
-        <p class="copyright">&copy; 2018 Built with  <span style="color:red" class="fa fa-heart" ></span>  by African minds in Cameroon, France & USA</p>
+        <i class="fab fa-twitter"><a href="http://twitter.kkakko.com"></a></i>
+        <i class="fab fa-facebook"><a href="http://facebook.kkakko.com"></a></i>
+        <i class="fab fa-linkedin"><a href="http://linkedin.kkakko.com"></a></i>
       </div>
       <div class="footer-right">
         <p><a>F.A.Q</a></p>
