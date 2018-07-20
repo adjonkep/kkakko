@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         <h2>I want to Send a</h2>
       </p>
       <p>
-        <a href="http://dev.kkakko.com/send" class="btn btn-primary my-2">Parcel</a>
+        <a href="http://dev.kkakko.com/index.php/send" class="btn btn-primary my-2">Parcel</a>
         <a href="#" class="btn btn-secondary my-2">Courier</a>
       </p>
     </section>
