@@ -22,15 +22,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
     <header>
     </header>
-    <section>
-      <p>
-        <h2>I want to Send a</h2>
-      </p>
-      <p>
-        <a href="http://dev.kkakko.com/send" class="btn btn-primary my-2">Parcel</a>
-        <a href="#" class="btn btn-secondary my-2">Courier</a>
-      </p>
-    </section>
+    <div id ="app">
+        <h2>{{ product}} are in stock.</h2>
+    </div>
     <footer class="text-muted">
     </footer>
 
@@ -42,5 +36,12 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <script src="js/vendor/popper.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
     <script src="js/vendor/holder.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/vue.js"
+    <script>
+      const app = new Vue({
+          el: '#app',
+          data: {product: 'Boots'}
+      })
+    </script>
   </body>
 </html>
