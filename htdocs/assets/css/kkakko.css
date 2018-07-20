@@ -51,7 +51,7 @@ footer {
 }
 
 .footer-div {
-  display: inline;
+  display: inline-table;
 }
 
 
