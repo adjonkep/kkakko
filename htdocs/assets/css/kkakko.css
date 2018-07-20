@@ -16,7 +16,7 @@ header{
 
 .topnav {
   background-color: #333;
-  display: inline-table;
+  display: table;
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -28,9 +28,8 @@ img {
   float: left;
 }
 
-.topnav .header-util {
-  float: right;
-  top: 50px;
+.header-util {
+  vertical-align: middle;
 }
 
 button {
@@ -59,6 +58,7 @@ footer {
   float: left;
   color: whitesmoke;
   font-size: 10px;
+  width: 33.33%;
 }
 
 .footer-left p {
@@ -70,6 +70,7 @@ footer {
   color: whitesmoke;
   font-size: 10px;
   overflow: auto;
+  width: 33.33%;
 }
 
 .footer-right p {
@@ -79,6 +80,7 @@ footer {
 .footer-icon {
   float: left;
   color: whitesmoke;
+  width: 33.33%;
 }
 
 .footer-icon i {
