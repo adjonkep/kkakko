@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       <div class="topnav">
         <div class="logo">
           <a href="#">
-            <img src="<?php echo base_url(); ?>assets/images/kkakko-logos-12.png">
+            <img src="<?php echo base_url(); ?>assets/images/kkakko-logos-13.png">
           </a>
         </div>
         <div class="header-util">
