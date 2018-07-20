@@ -81,8 +81,13 @@ footer {
 }
 
 .footer-icon {
-  float: center;
   vertical-align: top;
   color: whitesmoke;
   position: relative;
+  width: 33.3%;
+}
+
+.footer-icon i {
+  size: 20px;
+  margin-left: 15px;
 }
