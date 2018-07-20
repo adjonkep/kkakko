@@ -58,7 +58,6 @@ footer {
   font-size: 10px;
   vertical-align: top;
   width: 33.3%;
-  position: fixed;
   overflow: auto;
 }
 
@@ -72,7 +71,6 @@ footer {
   font-size: 10px;
   vertical-align: top;
   width: 33.3%;
-  position: fixed;
   overflow: auto;
 }
 
@@ -83,7 +81,6 @@ footer {
 .footer-icon {
   vertical-align: top;
   color: whitesmoke;
-  position: fixed;
   width: 33.4%;
 }
 
