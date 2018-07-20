@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <script src="js/vendor/popper.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
     <script src="js/vendor/holder.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/vue.js"</script>
+    <script src="<?php echo base_url(); ?>assets/js/vue.js"></script>
     <script>
       const app = new Vue({
           el: '#app',
