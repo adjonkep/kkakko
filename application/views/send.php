@@ -35,7 +35,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       </div>
     </header>
     <div id ="app">
-        <h2>{{ product }} workflow.</h2>
+        <ul>
+          <li v-for="product in products">
+            {{ product }}
+          </li>
+        </ul>
     </div>
 
     <h4>Display Records From Database Using Codeigniter</h4>
@@ -84,7 +88,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       const app = new Vue({
           el: '#app',
           data: { 
-              product: 'spaghetti'
+              products: <?php $infos ?>
           }
       })
     </script>
