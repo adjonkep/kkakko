@@ -88,7 +88,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       const app = new Vue({
           el: '#app',
           data: { 
-              products: <?php echo $infos ?>
+              products: <?php echo json_encode($infos) ?>
           }
       })
     </script>
