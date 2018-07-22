@@ -34,27 +34,14 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
       </div>
     </header>
+    <i class="fas fa-arrow-alt-square-left"></i>
     <div id ="app">
         <ul>
           <li v-for="product in products">
             {{ product }}
           </li>
         </ul>
-    </div>
-
-    <h4>Display Records From Database Using Codeigniter</h4>
-    <table>
-     <tr>
-      <td><strong>City Offered</strong></td>
-      <td><strong>Countries</strong></td>
-    </tr> 
-     <?php foreach($infos as $info){?>
-     <tr>
-         <td><?php echo $info->cityName;?></td>
-         <td><?php echo $info->country;?></td>
-      </tr>     
-     <?php }?>  
-   </table>
+    </div>    
     <footer>
       <div class="footer-div">
       <div class="footer-left">
