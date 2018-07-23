@@ -36,11 +36,16 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     </header>
     <i class="fa fa-arrow-left"></i>
     <div id ="app">
-      <p>I want to send a {{ item }}</p>
+      <p>I want to send a <?php echo $_POST["name"]</p>
       <input type="text" name="city" list="cityname">
-        <datalist id="cityname">
+        <datalist id="from">
           <option v-for="city in cities" value="cityName">{{ city.cityName }}</option>
         </datalist>
+        <datalist id="to">
+          <option v-for="city in cities" value="cityName">{{ city.cityName }}</option>
+        </datalist>
+        <button></button>
+      </input>
     </div>    
     <footer>
       <div class="footer-div">

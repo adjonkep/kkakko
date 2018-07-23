@@ -34,10 +34,10 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       </div>
     </header>
     <div>
-    <form action="send.php" method="post">
+    <form action="index.php/send.php" method="post">
       <p>I want to send</p>
-      <input type="submit" class="btn btn-primary my-2" value="parcel"></input>
-      <input type="submit" class="btn btn-primary my-2" value="courier"></input>
+      <input type="submit" class="btn btn-primary my-2" name="parcel" value="parcel"></input>
+      <input type="submit" class="btn btn-primary my-2" name ="courier" value="courier"></input>
     </form>
     </div>
     <footer>
