@@ -35,10 +35,10 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     </header>
     <div>
     <?php 
-    if($_POST['parcel']){
+    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['parcel'])){
      $type= "parcel";
     }
-    if($_POST['courier']){
+    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['courier'])){
       $type="courier";
     }
     ?>
