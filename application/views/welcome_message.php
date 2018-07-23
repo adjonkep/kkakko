@@ -34,12 +34,19 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       </div>
     </header>
     <div>
+    <?php 
+    if(isset($_POST['parcel'])){
+     $type= "parcel";
+    }
+    if(isset($_POST['courier'])){
+      $type="courier";
+    }
+    ?>
     <form action="index.php/send" method="post">
       <p>I want to send</p>
-      <input type="hidden" name="type" value="parcel">
       <input type="submit" class="btn btn-primary my-2" value="parcel">
+      <input type="submit" class="btn btn-primary my-2" value="courier">
     </form>
-    <input type="submit" class="btn btn-primary my-2" value="courier">
     </form>
     </div>
     <footer>
