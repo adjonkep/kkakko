@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
       </div>
     </header>
-    <i class="fas fa-arrow-alt-square-left"></i>
+    <i class="fa fa-arrow-alt-square-left"></i>
     <div id ="app">
         <ul>
           <li v-for="product in products">
