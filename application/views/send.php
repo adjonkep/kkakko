@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       <p>I want to send a {{ item }}</p>
       <input type="text" name="city" list="cityname">
         <datalist id="cityname">
-          <option v-for="city in cities" value="{{ city.cityName }}s">
+          <option v-for="city in cities" value="{{ city.cityName }}">
         </datalist>
     </div>    
     <footer>
