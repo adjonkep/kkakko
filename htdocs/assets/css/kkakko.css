@@ -13,7 +13,7 @@ html {
 header{
   width: 100%;
   overflow: hidden;
-  position: fixed;
+  position: relative;
   top: 0;
 }
 
@@ -46,6 +46,10 @@ button {
   text-align: center;
   text-decoration: none;
   font-size: 16px;
+}
+
+form {
+  position: relative;
 }
 
 footer {
