@@ -34,13 +34,13 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
       </div>
     </header>
-    <i class="fa fa-arrow-alt-square-left"></i>
+    <i class="fa fa-arrow-left"></i>
     <div id ="app">
-        <ul>
-          <li v-for="product in products">
-            {{ product }}
-          </li>
-        </ul>
+      <p>I want to send a {{ item }}</p>
+      <input type="text" name="city" list="cityname">
+        <datalist id="cityname">
+          <option v-for="city in cities" value="city.cityName">{{ city.cityName }}</option>
+        </datalist>
     </div>    
     <footer>
       <div class="footer-div">
@@ -75,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       const app = new Vue({
           el: '#app',
           data: { 
-              products: <?php echo json_encode($infos) ?>
+              cities: <?php echo json_encode($infos) ?>
           }
       })
     </script>
