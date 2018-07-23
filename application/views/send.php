@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     </header>
     <i class="fa fa-arrow-left"></i>
     <div id ="app">
-      <p>I want to send a <?php echo $type; ?></p>
+      <p>I want to send a <?php if(isset($type)){ echo $type;} ?></p>
 
       <input type="text" name="city" list="cityname">
         <datalist id="from">
