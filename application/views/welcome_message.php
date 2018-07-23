@@ -34,13 +34,6 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       </div>
     </header>
     <div>
-    
-    <form action="index.php/send" method="post">
-      <p>I want to send</p>
-      <input type="submit" class="btn btn-primary my-2" value="parcel">
-      <input type="submit" class="btn btn-primary my-2" value="courier">
-    </form>
-    </form>
     <?php 
     if(isset($_POST['parcel'])){
      $type= "parcel";
@@ -49,6 +42,13 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       $type="courier";
     }
     ?>
+    <form action="index.php/send" method="post">
+      <p>I want to send</p>
+      <input type="submit" class="btn btn-primary my-2" value="parcel">
+      <input type="submit" class="btn btn-primary my-2" value="courier">
+    </form>
+    </form>
+    
     </div>
     <footer>
       <div class="footer-div">
