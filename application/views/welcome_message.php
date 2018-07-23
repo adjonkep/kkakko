@@ -44,6 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     ?>
     <form action="index.php/send" method="post">
       <p>I want to send</p>
+      <input type="hidden" name="type" value="<?php  echo $type;?>" >
       <input type="submit" class="btn btn-primary my-2" value="parcel">
       <input type="submit" class="btn btn-primary my-2" value="courier">
     </form>
