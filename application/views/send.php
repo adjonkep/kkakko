@@ -35,6 +35,14 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       </div>
     </header>
     <i class="fa fa-arrow-left"></i>
+    <?php
+    if (isset($_POST['parcel'])) {
+        $type = $_POST['parcel'];
+    }
+    elseif (isset($_POST['courier'])) {
+      $type = $_POST['courier'];
+    }
+    ?>
     <div id ="app">
       <p>I want to send a <?php if(isset($type)){ echo $type;} ?></p>
 
