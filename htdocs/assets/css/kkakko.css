@@ -73,6 +73,14 @@ footer {
   display: inline-table;
 }
 
+.listing-left{
+  display: inline;
+}
+
+.listing-right{
+  display: inline;
+}
+
 .footer-left p {
   text-decoration: underline;
 }

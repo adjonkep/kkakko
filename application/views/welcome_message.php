@@ -45,11 +45,13 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <footer>
       <div class="footer-div">
       <div class="footer-left">
-        <p><a>The Journey of kkakko</a></p>
-        <p><a>About Us</a></p>
-        <p><a>Contact Us</a></p>          
-        <p><a>The Contract</a></p>
-        <p><a>The Pricing</a></p>
+        <p class="listing-left">
+          <a>The Journey of kkakko</a>
+          <a>About Us</a>
+          <a>Contact Us</a>          
+          <a>The Contract</a>
+          <a>The Pricing</a>
+        </p>
       </div>
       <div class="footer-icon">
         <i class="fab fa-twitter"><a href="http://twitter.kkakko.com"></a></i>
@@ -57,9 +59,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         <i class="fab fa-linkedin"><a href="http://linkedin.kkakko.com"></a></i>
       </div>
       <div class="footer-right">
-        <p><a>F.A.Q</a></p>
-        <p><a>Privacy</a></p>
-        <p><a>Terms and Conditions</a></p>
+        <p class="listing-right">
+          <a>F.A.Q</a>
+          <a>Privacy</a>
+          <a>Terms and Conditions</a>
+        </p>
       </div>
       </div>
     </footer>
