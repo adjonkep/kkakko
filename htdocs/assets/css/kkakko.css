@@ -75,7 +75,14 @@ footer {
 
 .listing-left{
   display: inline;
-  margin-left: 10px;
+}
+
+.listing-left a{
+  margin-right: 10px;
+}
+
+.listing-right a{
+  margin-right: 10px;
 }
 
 .listing-right{
