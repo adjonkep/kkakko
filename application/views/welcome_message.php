@@ -40,12 +40,12 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       <input type="submit" class="btn btn-primary my-2" name='parcel' value="parcel">
       <input type="submit" class="btn btn-primary my-2" name='courier' value="courier">
     </form>
-    <?php 
-    if($_POST['parcel'] == 'parcel'){
-     $type= "parcel";
+    <?php
+    if (isset($_POST['parcel'])) {
+        $type = $_POST['parcel'];
     }
-    elseif($_POST['courier'] == 'courier'){
-      $type="courier";
+    elseif (isset($_POST['courier'])) {
+      $type = $_POST['courier'];
     }
     ?>
     </div>
