@@ -75,6 +75,7 @@ footer {
 
 .listing-left{
   display: inline;
+  margin-left: 10px;
 }
 
 .listing-right{
