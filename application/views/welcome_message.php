@@ -54,9 +54,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </p>
       </div>
       <div class="footer-icon">
-        <i class="fab fa-twitter"><a href="http://twitter.kkakko.com"></a></i>
-        <i class="fab fa-facebook"><a href="http://facebook.kkakko.com"></a></i>
-        <i class="fab fa-linkedin"><a href="http://linkedin.kkakko.com"></a></i>
+        <a href="http://twitter.kkakko.com"><i class="fab fa-twitter"></i></a>
+        <a href="http://facebook.kkakko.com"><i class="fab fa-facebook"></i></a>
+        <a href="http://linkedin.kkakko.com"><i class="fab fa-linkedin"></i></a>
       </div>
       <div class="footer-right">
         <p class="listing-right">
