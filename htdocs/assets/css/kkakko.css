@@ -66,11 +66,10 @@ footer {
 
 
 .footer-left { 
-  float: left;
   color: whitesmoke;
   font-size: 10px;
   width: 33.33%;
-  display: inline-table;
+  display: inline-block;
 }
 
 .footer-left p {
@@ -78,12 +77,11 @@ footer {
 }
 
 .footer-right {
-  float: left;
   color: whitesmoke;
   font-size: 10px;
   overflow: auto;
   width: 33.33%;
-  display: inline-table;
+  display: inline-block;
 }
 
 .footer-right p {
