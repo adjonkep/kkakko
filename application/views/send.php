@@ -53,11 +53,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       <form>  
         <select id="from">
           <option value="0">From</option>
-          <option v-for="city in cities" value="cityName">{{ city.cityName }}</option>
+          <option v-for="city in cities" value="cityName">{{ city }}</option>
         </select>
         <select id="to">
           <option value="0">To</option>
-          <option v-for="city in cities" value="cityName">{{ city.cityName }}</option>
+          <option v-for="city in cities" value="cityName">{{ city }}</option>
         </select>
         <button type="submit" name="submit" value="enter">Enter</button>
       </form>
@@ -101,7 +101,13 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       const app = new Vue({
           el: '#app',
           data: { 
-              cities: <?php echo json_encode($infos) ?>
+              cities_offered: <?php echo json_encode($infos) ?>
+              cities: cities_offered.cityName
+          }
+          methods:{
+            populate: function(data, value){
+              return data.splice(data.indexof(value),1);
+            }
           }
       })
     </script>
