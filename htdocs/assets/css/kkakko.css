@@ -107,7 +107,7 @@ footer {
 }
 
 .footer-icon {
-  float: none;
+  float: left;
   color: whitesmoke;
   width: 33.33%;
 }
