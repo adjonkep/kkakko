@@ -53,11 +53,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       <form>  
         <select id="from">
           <option value="0">From</option>
-          <option v-for="city in cities" value="cityName">{{ city }}</option>
+          <option v-for="city in cities" value="cityName">{{ city.cityName }}</option>
         </select>
         <select id="to">
           <option value="0">To</option>
-          <option v-for="city in cities" v-bind:value="option.value">{{ city }}</option>
+          <option v-for="city in cities" v-bind:value="option.value">{{ city.cityName }}</option>
         </select>
         <button type="submit" name="submit" value="enter">Enter</button>
       </form>
