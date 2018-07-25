@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
       </div>
     </header>
-    <a class="btn btn-primary" href="#"><i class="fa fa-arrow-left"></i>Back</a>
+    <a class="btn btn-primary" href="dev.kkakko.com"><i class="fa fa-arrow-left"></i>Back</a>
     <?php
     if (isset($_POST['parcel'])) {
         $type = $_POST['parcel'];
@@ -45,6 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     ?>
     <div id ="app">
       <p>I want to send a <?php if(isset($type)){ echo $type;} ?></p>
+      <form>  
         <select id="from">
           <option value="0">From</option>
           <option v-for="city in cities" value="cityName">{{ city.cityName }}</option>
@@ -53,7 +54,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           <option value="0">To</option>
           <option v-for="city in cities" value="cityName">{{ city.cityName }}</option>
         </select>
-        <button></button>
+        <button type="submit" name="submit" value="enter">Enter</button>
+      </form>
     </div>    
     <footer>
       <div class="footer-div">
