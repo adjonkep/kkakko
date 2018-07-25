@@ -101,7 +101,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       const app = new Vue({
           el: '#app',
           data: { 
-              cities: <?php echo json_encode(array_values($infos))?>
+              cities: <?php echo json_encode($infos)?>
           }
           methods:{
             populate: function(data, value){
