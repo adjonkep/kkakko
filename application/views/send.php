@@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           },
           methods:{
             populateTo: function(){
-              var x = document.getElementById("To").value;
+              var x = document.getElementById("From").value;
               this.cities.splice(cities.indexof(x),1);
             }
           }
