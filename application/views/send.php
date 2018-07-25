@@ -43,6 +43,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       $type = $_POST['courier'];
     }
     ?>
+    <script>
+    funtion populate(arr, item){
+      return arr.splice(arr.indexof(item),1);
+    }
+    </script>
     <div id ="app">
       <p>I want to send a <?php if(isset($type)){ echo $type;} ?></p>
       <form>  
