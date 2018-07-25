@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </select>
         <select id="to">
           <option value="0">To</option>
-          <option v-for="city in cities" v-bind:value="option.value">{{ city.cityName }}</option>
+          <option v-for="city in cities" v-bind:value="option.value">{{ city }}</option>
         </select>
         <button type="submit" name="submit" value="enter">Enter</button>
       </form>
@@ -101,7 +101,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       const app = new Vue({
           el: '#app',
           data: { 
-              cities: <?php echo json_encode($infos)?>
+              cities: <?php echo json_encode(array_values($infos))?>
           }
           methods:{
             populate: function(data, value){
