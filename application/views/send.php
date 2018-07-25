@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
       </div>
     </header>
-    <a class="btn btn-primary" href="dev.kkakko.com"><i class="fa fa-arrow-left"></i>Back</a>
+    <a class="btn btn-primary" href="welcome"><i class="fa fa-arrow-left"></i>Back</a>
     <?php
     if (isset($_POST['parcel'])) {
         $type = $_POST['parcel'];
