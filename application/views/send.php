@@ -98,11 +98,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/vue.js"></script>
     <script>
-      const app = new Vue({
+      var fromTo = new Vue({
           el: '#app',
           data: { 
               cities: <?php echo json_encode($infos)?>
-          }
+          },
           methods:{
             populate: function(data, value){
               return data.splice(data.indexof(value),1);
