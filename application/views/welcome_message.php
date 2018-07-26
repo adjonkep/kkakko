@@ -28,10 +28,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           </a>
         </div>
         <div class="header-util">
-          <div class="header-button">
             <button class="w3-button">Login</button>
             <button class="w3-button">Register</button>
-          </div>
         </div>
       </div>
     </header>
