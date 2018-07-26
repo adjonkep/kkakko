@@ -41,6 +41,8 @@ header{
 
 
 .w3-button {
+  float: right;
+  padding: 37px;
   background-color: #4CAF50; /* Green */
   vertical-align: 50px;
   border: none;
