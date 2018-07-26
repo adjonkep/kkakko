@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       </div>
     </header>
     <div class="col-sm-6">
-      <h1>Bienvenue<br /> sur <span class="text-warning"><img alt="KkakKo Logo" class="img-responsive" src="https://kkakko.com/uploads/k/kroneldo28/4a55342387.png"/></span> ,Votre nouvelle fa&ccedil;on d&#39;exp&eacute;dier courriers et petits colis &agrave; travers le monde.</h1>
+      <h1>Bienvenue sur <span class="text-warning"><img alt="KkakKo Logo" class="img-responsive" src="<?php echo base_url(); ?>assets/images/kkakko.png"/></span> ,Votre nouvelle </br>fa&ccedil;on d&#39;exp&eacute;dier courriers et petits colis &agrave; travers le </br>monde.</h1>
     </div>
     <div>
     
