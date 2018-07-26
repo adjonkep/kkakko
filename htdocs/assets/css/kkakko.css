@@ -39,7 +39,11 @@ header{
   height: 100%;
 }
 
-.header-util button {
+.header-button{
+  vertical-align: middle;
+}
+
+button {
   background-color: #4CAF50; /* Green */
   float: right;
   border: none;
@@ -47,7 +51,6 @@ header{
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  vertical-align: middle;
 }
 
 form {
