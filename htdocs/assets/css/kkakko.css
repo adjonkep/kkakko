@@ -72,6 +72,15 @@ form {
   height: 56px;
 }
 
+.send-div{
+  background-image: inherit;
+}
+
+.send-label-div {
+  font-size: 15px;
+  font-family: "Times New Roman";
+}
+
 footer {
   background-color: #333;
   overflow: hidden;
