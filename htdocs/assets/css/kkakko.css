@@ -40,7 +40,7 @@ header{
 }
 
 
-.header-util button {
+.w3-button {
   background-color: #4CAF50; /* Green */
   vertical-align: 50px;
   border: none;
