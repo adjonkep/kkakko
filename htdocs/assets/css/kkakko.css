@@ -36,6 +36,7 @@ header{
 .header-util {
   float: right;
   width: 50%;
+  height: 100%;
 }
 
 .header-util button {
@@ -47,6 +48,7 @@ header{
   text-decoration: none;
   font-size: 16px;
   vertical-align: middle;
+  height: 100%;
 }
 
 form {
