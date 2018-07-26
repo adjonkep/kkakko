@@ -42,7 +42,7 @@ header{
 
 .header-util button {
   background-color: #4CAF50; /* Green */
-  vertical-align: middle;
+  vertical-align: 50px;
   border: none;
   color: white;
   text-align: center;
