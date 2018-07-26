@@ -73,11 +73,11 @@ form {
 }
 
 .send-div{
-  background-image: inherit;
+  background: inherit;
 }
 
 .send-label-div {
-  font-size: 15px;
+  font-size: 20px;
   font-family: "Times New Roman";
 }
 
