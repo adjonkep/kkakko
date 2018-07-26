@@ -58,6 +58,10 @@ form {
   position: relative;
 }
 
+.img-responsive{
+  max-width: 100%;
+}
+
 footer {
   background-color: #333;
   overflow: hidden;
