@@ -63,6 +63,10 @@ form {
   padding: 25px;
 }
 
+.logo-inside {
+  vertical-align: 0px;
+}
+
 .img-responsive{
   width: 140px;
   height: 56px;
