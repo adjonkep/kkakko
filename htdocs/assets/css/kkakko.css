@@ -60,11 +60,11 @@ form {
 
 .welcome-div {
   border: 10px solid green;
-  padding: 25px;
+  padding: 10px;
 }
 
 .logo-inside {
-  vertical-align: 0px;
+  vertical-align: 10px;
 }
 
 .img-responsive{
