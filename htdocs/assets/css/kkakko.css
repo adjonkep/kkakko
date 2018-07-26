@@ -1,11 +1,11 @@
 html { 
-  background: url("../images/web_0201-min.png"); 
+  background: url("../images/web_0306-min.png"); 
   background-size: cover;
 }
 
 @media only screen and (max-width: 600px) {
   html { 
-    background: url("../images/web_0202-min.png"); 
+    background: url("../images/web_0306-min.png"); 
     background-size: cover;
   }
 }
@@ -27,7 +27,7 @@ header{
   width: 50%;
 }
 
-img {
+.logo a img {
   width: 140px;
   height: 100px;
   float: left;
@@ -35,17 +35,18 @@ img {
 
 .header-util {
   float: right;
-  vertical-align: middle;
   width: 50%;
 }
 
-button {
+.header-util button {
   background-color: #4CAF50; /* Green */
+  float: right;
   border: none;
   color: white;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
+  vertical-align: middle;
 }
 
 form {
