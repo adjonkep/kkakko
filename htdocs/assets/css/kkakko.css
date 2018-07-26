@@ -59,7 +59,8 @@ form {
 }
 
 .img-responsive{
-  height: 390px;
+  width: 390px;
+  height: 154px;
 }
 
 footer {
