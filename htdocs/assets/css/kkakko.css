@@ -58,6 +58,11 @@ form {
   position: relative;
 }
 
+.welcome-div {
+  border: 25px solid green;
+  padding: 25px;
+}
+
 .img-responsive{
   width: 140px;
   height: 56px;
