@@ -47,13 +47,18 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <script>
     function fromToEnter(){
       var from = $("#from option:selected").text();
-      $.post({
-        url: "dev.kkakko.com/index.php/send.php",
+      $.ajax({
+        type: 'post',
+        dataType: 'text',
+        url: 'send.php',
         data: from,
         cache: false,
-        success: function(data){
+        success: function(data, textStatus, jQxhr){
           $("#fromToForm").css("display: none");
           $("<p>"+from+"</p>").appendTo($("#app"));
+        },
+        error: function( jqXhr, textStatus, errorThrown ){
+          console.log( errorThrown );
         }
       });
     }
