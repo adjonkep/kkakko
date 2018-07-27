@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         url: "send.php",
         data: from,
         cache: false,
-        success: function(){
+        success: function(data){
           $("#fromToForm").css("display: none");
           $("<p>From "+ from + "</p>">).appendTo("#app");
         }
