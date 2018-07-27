@@ -45,10 +45,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     ?>
     <script>
     function fromToEnter(){
-      $("#fromToForm").hide();
-      $("<p>From "+$("#from").val()+ "</p>").appendTo("#app");
+      $("#fromToForm").css("display: none");
+      $("<p>From "+$("#from option:selected").text()+ "</p>">).appendTo("#app");
       }
     </script>
+
     <div id ="app">
       <p align="center">I want to send a <?php if(isset($type)){ echo $type;} ?></p>
       <form id="fromToForm" align="center">
