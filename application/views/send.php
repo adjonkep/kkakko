@@ -44,6 +44,22 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     }
     ?>
 
+<script>
+    function fromToEnter(){
+      var from = $("#from option:selected").text();
+      $.ajax({
+        type: "post",
+        url: this.href,
+        data: from,
+        cache: false,
+        success: function(){
+          $("#fromToForm").css("display: none");
+          $("<p>From "+ from + "</p>">).appendTo("#app");
+        }
+      })
+      }
+</script>
+
     <div id ="app">
       <p align="center">I want to send a <?php if(isset($type)){ echo $type;} ?></p>
       <form id="fromToForm" align="center">
@@ -55,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           <option value="0">To</option>
           <option v-for="city in cities">{{ city.cityName }}</option>
         </select>
-        <button  name="submit" value="enter" v-on:click="fromToEnter()">Enter</button>
+        <button  name="submit" value="enter" onclick="fromToEnter()">Enter</button>
       </form>
       <form></form>
     </div>    
@@ -104,14 +120,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             populateTo: function(){
               var x = document.getElementById("From").value;
               this.cities.splice(cities.indexof(x),1);
-            },
-            fromToEnter: function(){
-              $("#fromToForm").css("display: none");
-              $("<p>From "+$("#from option:selected").text()+ "</p>">).appendTo("#app");
-              return false;
             }
-
-          }
       })
     </script>
   </body>
