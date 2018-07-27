@@ -43,12 +43,6 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       $type = $_POST['courier'];
     }
     ?>
-    <script>
-    function fromToEnter(){
-      $("#fromToForm").css("display: none");
-      $("<p>From "+$("#from option:selected").text()+ "</p>">).appendTo("#app");
-      }
-    </script>
 
     <div id ="app">
       <p align="center">I want to send a <?php if(isset($type)){ echo $type;} ?></p>
@@ -110,6 +104,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             populateTo: function(){
               var x = document.getElementById("From").value;
               this.cities.splice(cities.indexof(x),1);
+            },
+            fromToEnter: function(){
+              $("#fromToForm").css("display: none");
+              $("<p>From "+$("#from option:selected").text()+ "</p>">).appendTo("#app");
+              return false;
             }
 
           }
