@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       var from = $("#from option:selected").text();
       $.ajax({
         type: "post",
-        url: this.href,
+        url: "send.php",
         data: from,
         cache: false,
         success: function(){
