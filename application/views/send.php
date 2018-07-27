@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         cache: false,
         success: function(data){
           $("#fromToForm").css("display: none");
-          $("<p>From "+ from + "</p>">).appendTo("#app");
+          $("<p>"+from+"</p>">).appendTo($("#app"));
         }
       });
     }
