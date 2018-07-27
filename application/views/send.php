@@ -43,17 +43,22 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       $type = $_POST['courier'];
     }
     ?>
-    
+    <script>
+    function fromToEnter(){
+      $("#fromToForm").hide();
+      $("<p>From "+$("#from").val()+ "</p>").appendTo("#app");
+      }
+    </script>
     <div id ="app">
       <p align="center">I want to send a <?php if(isset($type)){ echo $type;} ?></p>
       <form id="fromToForm" align="center">
         <select id="from">
           <option value="0">From</option>
-          <option v-for="city in cities" value="cityName">{{ city.cityName }}</option>
+          <option v-for="city in cities">{{ city.cityName }}</option>
         </select>
         <select id="to">
           <option value="0">To</option>
-          <option v-for="city in cities" value="cityName">{{ city.cityName }}</option>
+          <option v-for="city in cities">{{ city.cityName }}</option>
         </select>
         <button  name="submit" value="enter" v-on:click="fromToEnter()">Enter</button>
       </form>
@@ -104,11 +109,6 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             populateTo: function(){
               var x = document.getElementById("From").value;
               this.cities.splice(cities.indexof(x),1);
-            },
-
-            fromToEnter: function(){
-              $("#fromToForm").hide();
-              $("<p>From "+$("#from").val()+ "</p>").appendTo("#app");
             }
 
           }
