@@ -47,8 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <script>
     function fromToEnter(){
       var from = $("#from option:selected").text();
-      $.ajax({
-        type: "post",
+      $.post({
         url: "dev.kkakko.com/index.php/send.php",
         data: from,
         cache: false,
@@ -71,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           <option value="0">To</option>
           <option v-for="city in cities">{{ city.cityName }}</option>
         </select>
-        <button  name="submit" value="enter" onclick="return fromToEnter()">Enter</button>
+        <button  name="submit" value="enter" onclick="fromToEnter()">Enter</button>
       </form>
       <form></form>
     </div>    
