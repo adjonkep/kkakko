@@ -44,26 +44,6 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     }
     ?>
 
-<script>
-    function fromToEnter(){
-      var from = $("#from option:selected").text();
-      $.ajax({
-        type: 'post',
-        dataType: 'text',
-        url: 'send.php',
-        data: from,
-        cache: false,
-        success: function(data, textStatus, jQxhr){
-          $("#fromToForm").css("display: none");
-          $("<p>"+from+"</p>").appendTo($("#app"));
-        },
-        error: function( jqXhr, textStatus, errorThrown ){
-          console.log( errorThrown );
-        }
-      });
-    }
-</script>
-
     <div id ="app">
       <p align="center">I want to send a <?php if(isset($type)){ echo $type;} ?></p>
       <form id="fromToForm" align="center">
@@ -121,5 +101,24 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           }
       })
     </script>
+    <script>
+    function fromToEnter(){
+      var from = $("#from option:selected").text();
+      $.ajax({
+        type: 'post',
+        dataType: 'text',
+        url: 'send.php',
+        data: from,
+        cache: false,
+        success: function(data, textStatus, jQxhr){
+          $("#fromToForm").css("display: none");
+          $("<p>"+from+"</p>").appendTo($("#app"));
+        },
+        error: function( jqXhr, textStatus, errorThrown ){
+          console.log( errorThrown );
+        }
+      });
+    }
+</script>
   </body>
 </html>
