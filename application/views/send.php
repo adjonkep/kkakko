@@ -114,12 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           el: '#app',
           data: { 
               cities: <?php echo json_encode($infos)?>
-          },
-          methods:{
-            populateTo: function(){
-              var x = document.getElementById("From").value;
-              this.cities.splice(cities.indexof(x),1);
-            }
+          }
       })
     </script>
   </body>
