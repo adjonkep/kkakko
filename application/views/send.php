@@ -108,7 +108,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
             fromToEnter: function(){
               $("#fromToForm").hide();
-              $("<p>From "+$(#from).val()+ "</p>").appendTo("#app");
+              $("<p>From "+$("#from").val()+ "</p>").appendTo("#app");
             }
 
           }
