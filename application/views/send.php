@@ -119,7 +119,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#fromToForm").hide() ;
-              $("<p>From:" + data.from + " To: " + data.to + "</p>").appendTo($("#app"));
+              $("<p>From:" + from + " To: " + to + "</p>")
+                .css("align", "center");
+                .appendTo($("#app"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
