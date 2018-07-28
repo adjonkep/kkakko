@@ -58,11 +58,6 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         <button id="submit" v-on:click="fromToEnter()">Enter</button>
       </form>
       <form>
-      <v-select
-          :cities="cities"
-          label="Outline style"
-          outline
-        ></v-select>
       </form>
     </div>    
     <footer>
@@ -101,6 +96,12 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <script src="<?php echo base_url(); ?>assets/js/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
     <script>
+
+      Vue.component('fromToParagraph', {
+        props: ['from', 'to'],
+        template: `<p>From:{{ from }} To: {{ to }}<div>`
+        });
+
       var fromTo = new Vue({
           el: '#app',
           data: { 
@@ -118,7 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#fromToForm").hide() ;
-              $("<p>From: "+from+"</p>").appendTo($("#app"));
+              $("<fromToParagraph/>").appendTo($("#app"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
