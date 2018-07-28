@@ -97,7 +97,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
     <script>
 
-      Vue.component('fromToPaagraph', {
+      Vue.component('fromToParagraph', {
         props: ['from', 'to'],
         template: '<p>From:{{ from }} To: {{ to }}</p>'
         });
@@ -119,7 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#fromToForm").hide() ;
-              $("<fromToParagraph/>").appendTo($("#app"));
+              $("<p>From:" + data.from" To: " +data.to"</p>").appendTo($("#app"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
