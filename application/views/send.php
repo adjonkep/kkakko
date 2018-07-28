@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
     <div id ="app">
       <p align="center">I want to send a <?php if(isset($type)){ echo $type;} ?></p>
-      <form id="fromToForm" align="center">
+      <form id="fromToForm" align="center" onsubmit="return false;">
         <select id="from">
           <option value="0">From</option>
           <option v-for="city in cities">{{ city.cityName }}</option>
