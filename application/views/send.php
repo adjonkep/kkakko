@@ -108,7 +108,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       $.ajax({
         type: 'post',
         dataType: 'text',
-        url: 'send.php',
+        url: 'send',
         data: from,
         cache: false,
         success: function(data, textStatus, jQxhr){
