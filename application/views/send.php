@@ -103,7 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     </script>
     <script>
     $(document).ready(function(){
-    $("#submit").click (function(){
+    $("#submit").click(function(){
       var from = $("#from option:selected").text();
       $.ajax({
         type: 'post',
