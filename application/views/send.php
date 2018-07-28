@@ -99,6 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           data: { 
               cities: <?php echo json_encode($infos)?>
           }
+
       })
     </script>
     <script>
