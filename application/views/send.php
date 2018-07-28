@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           <option value="0">To</option>
           <option v-for="city in cities">{{ city.cityName }}</option>
         </select>
-        <button  name="submit" value="enter" onclick="return fromToEnter();">Enter</button>
+        <button  name="submit" value="enter" onclick="fromToEnter()">Enter</button>
       </form>
       <form></form>
     </div>    
@@ -118,6 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           console.log( errorThrown );
         }
       });
+      return false;
     }
 </script>
   </body>
