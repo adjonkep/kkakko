@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           <option value="0">To</option>
           <option v-for="city in cities">{{ city.cityName }}</option>
         </select>
-        <button id="submit">Enter</button>
+        <button id="submit" onclick="fromToEnter()">Enter</button>
       </form>
       <form></form>
     </div>    
@@ -102,9 +102,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       })
     </script>
     <script>
-    $(document).ready(function(){
-    $("#submit").click(function(){
+    function fromToEnter(){
       var from = $("#from option:selected").text();
+      var to = $("#to option:selected").text();
       $.ajax({
         type: 'post',
         dataType: 'text',
@@ -112,15 +112,15 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         data: from,
         cache: false,
         success: function(data, textStatus, jQxhr){
-          $("#fromToForm").hide();
-          $("<p>"+from+"</p>").appendTo($("#app"));
+          $("#fromToForm").hide() ;
+          $("<p>From: "+from+"</p>").appendTo($("#app"));
         },
         error: function( jqXhr, textStatus, errorThrown ){
           console.log( errorThrown );
         }
-      });
-    });
-    });
-</script>
+    })
+    }
+    </script>
+    
   </body>
 </html>
