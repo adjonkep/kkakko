@@ -57,7 +57,13 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </select>
         <button id="submit" v-on:click="fromToEnter()">Enter</button>
       </form>
-      <form></form>
+      <form>
+      <v-select
+          :cities="cities"
+          label="Outline style"
+          outline
+        ></v-select>
+      </form>
     </div>    
     <footer>
       <div class="footer-div">
@@ -93,6 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
     <script>
       var fromTo = new Vue({
           el: '#app',
