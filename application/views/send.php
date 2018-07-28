@@ -97,12 +97,12 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
     <script>
 
-      Vue.component('fromToParagraph', {
+      Vue.component('fromToPaagraph', {
         props: ['from', 'to'],
         template: '<p>From:{{ from }} To: {{ to }}</p>'
         });
 
-      var fromTo = new Vue({
+      var vm = new Vue({
           el: '#app',
           data: { 
               cities: <?php echo json_encode($infos)?>
