@@ -99,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
       Vue.component('fromToParagraph', {
         props: ['from', 'to'],
-        template: `<p>From:{{ from }} To: {{ to }}<div>`
+        template: '<p>From:{{ from }} To: {{ to }}</p>'
         });
 
       var fromTo = new Vue({
@@ -115,7 +115,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               type: 'post',
               dataType: 'text',
               url: 'send',
-              data: from,
+              data: {'from':from,'to':to},
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#fromToForm").hide() ;
