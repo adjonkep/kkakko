@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           <option value="0">To</option>
           <option v-for="city in cities">{{ city.cityName }}</option>
         </select>
-        <button id="submit" onclick="fromToEnter()">Enter</button>
+        <button id="submit" v-on:click="fromToEnter()">Enter</button>
       </form>
       <form></form>
     </div>    
@@ -98,30 +98,29 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           el: '#app',
           data: { 
               cities: <?php echo json_encode($infos)?>
+          },
+          methods: {
+            fromToEnter: function(){
+              var from = $("#from option:selected").text();
+              var to = $("#to option:selected").text();
+              $.ajax({
+              type: 'post',
+              dataType: 'text',
+              url: 'send',
+              data: from,
+              cache: false,
+              success: function(data, textStatus, jQxhr){
+              $("#fromToForm").hide() ;
+              $("<p>From: "+from+"</p>").appendTo($("#app"));
+              },
+              error: function( jqXhr, textStatus, errorThrown ){
+              console.log( errorThrown );
+              }
+              })
+            }
           }
 
       })
     </script>
-    <script>
-    function fromToEnter(){
-      var from = $("#from option:selected").text();
-      var to = $("#to option:selected").text();
-      $.ajax({
-        type: 'post',
-        dataType: 'text',
-        url: 'send',
-        data: from,
-        cache: false,
-        success: function(data, textStatus, jQxhr){
-          $("#fromToForm").hide() ;
-          $("<p>From: "+from+"</p>").appendTo($("#app"));
-        },
-        error: function( jqXhr, textStatus, errorThrown ){
-          console.log( errorThrown );
-        }
-    })
-    }
-    </script>
-    
   </body>
 </html>
