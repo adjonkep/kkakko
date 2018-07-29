@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </select>
         <button id="submit" v-on:click="fromToEnter()">Enter</button>
       </form>
-      <form id="volume-weight-form" align="center">
+      <form id="volume-weight-form" align="center" style="display:none;">
         <div id="volume-div">
           <a>Volume</a>
           <input type="range" min="1" max="100" value="50" class="slider" id="volume-slider"> 
@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
         <button id="submit">Enter</button>
       </form>
-      <form id="containing-form" align="center">
+      <form id="containing-form" align="center" style="display:none;">
         <h3>Containing</h3>
         <div>
           <input type="checkbox"  value="batteries">Batteries</input>
@@ -80,7 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
         <button id="submit">Enter</button>
       </form>
-      <form id="value-form" align="center">
+      <form id="value-form" align="center" style="display:none;">
         <h3>Valued at</h3>
         <input type="text" id="value-text" placeholder="Value">
         <select id="currency">
@@ -90,10 +90,10 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </select>
         <input type="submit">
       </form>
-      <form id="shipping-form" align="center">
+      <form id="shipping-form" align="center" style="display:none;">
         <h3>Shipping Option</h3>
-        <input type="radio" value="standard"><b>Standard</b>, 5 days shipping
-        <input type="radio" value="fast"><b>Fast</b>, 3 days shipping
+        <input type="radio" value="standard"><b>Standard</b>, 5 days shipping<br>
+        <input type="radio" value="fast"><b>Fast</b>, 3 days shipping<br>
         <input type="radio" value="Overnight"><b>Overight</b>, Tomorrow!
         <div>
         <button id="price-button">Price</button>
@@ -162,6 +162,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               success: function(data, textStatus, jQxhr){
               $("#fromToForm").hide() ;
               $("<p align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#app"));
+              $("#volume-weight-form").show();
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
