@@ -43,9 +43,10 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       $type = $_POST['courier'];
     }
     ?>
-
+    <div id="invoice-div">
+    <p align="center">I want to send a <?php if(isset($type)){ echo $type;} ?></p>
+    </div>
     <div id ="app">
-      <p align="center">I want to send a <?php if(isset($type)){ echo $type;} ?></p>
       <form id="fromToForm" align="center" onsubmit="return false;">
         <select id="from">
           <option value="" disabled selected>From</option>
@@ -161,7 +162,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#fromToForm").hide() ;
-              $("<p align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#app"));
+              $("<p align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#invoice-div"));
               $("#volume-weight-form").show();
               },
               error: function( jqXhr, textStatus, errorThrown ){
