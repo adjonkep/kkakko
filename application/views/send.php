@@ -57,7 +57,46 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </select>
         <button id="submit" v-on:click="fromToEnter()">Enter</button>
       </form>
-      <form>
+      <form id="volume-weight-form" align="center">
+        <div id="volume-div">
+          <a>Volume</a>
+          <input type="range" min="1" max="100" value="50" class="slider" id="volume-slider"> 
+          <a>Cm3</a>
+        </div>
+        <div id="weight-div">
+          <a>Weight</a>
+          <input type="range" min="1" max="100" value="50" class="slider" id="weight-slider">
+          <a>Kg</a>
+        </div>
+        <button id="submit">Enter</button>
+      </form>
+      <form id="containing-form" align="center">
+        <h3>Containing</h3>
+        <div>
+          <input type="checkbox"  value="batteries">Batteries</input>
+          <input type="checkbox"  value="fragile-items">Fragile Items</input>
+          <input type="checkbox"  value="documents">Documents</input>
+          <input type="checkbox"  value="irreplacables">Irreplacables</input>
+        </div>
+        <button id="submit">Enter</button>
+      </form>
+      <form id="value-form" align="center">
+        <h3>Valued at</h3>
+        <input type="text" id="value-text" placeholder="Value">
+        <select id="currency">
+          <option>Euro</option>
+          <option>Dollar</option>
+          <option>CFA</option>
+        </select>
+        <input type="submit">
+      </form>
+      <form id="shipping-form" align="center">
+        <h3>Shipping Option</h3>
+        <input type="radio" value="standard"><b>Standard</b>, 5 days shipping
+        <input type="radio" value="fast"><b>Fast</b>, 3 days shipping
+        <input type="radio" value="Overnight"><b>Overight</b>, Tomorrow!
+        <button id="price-button">Price</button>
+        <button id="checkout-button">Checkout</button>
       </form>
     </div>    
     <footer>
@@ -121,7 +160,6 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               success: function(data, textStatus, jQxhr){
               $("#fromToForm").hide() ;
               $("<p align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#app"));
-              $("#slider").appendTo($("#app"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
