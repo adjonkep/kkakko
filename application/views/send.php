@@ -92,6 +92,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?php echo base_url(); ?>assets/js/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
@@ -120,6 +121,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               success: function(data, textStatus, jQxhr){
               $("#fromToForm").hide() ;
               $("<p align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#app"));
+              $("#slider").appendTo($("#app"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
