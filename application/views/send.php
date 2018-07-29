@@ -95,8 +95,10 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         <input type="radio" value="standard"><b>Standard</b>, 5 days shipping
         <input type="radio" value="fast"><b>Fast</b>, 3 days shipping
         <input type="radio" value="Overnight"><b>Overight</b>, Tomorrow!
+        <div>
         <button id="price-button">Price</button>
         <button id="checkout-button">Checkout</button>
+        </div>
       </form>
     </div>    
     <footer>
