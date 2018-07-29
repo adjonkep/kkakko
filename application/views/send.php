@@ -44,10 +44,10 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     }
     ?>
     <div id="invoice-div">
-    <p align="center">I want to send a <?php if(isset($type)){ echo $type;} ?></p>
+    <p align="center">I want to send a <b><?php if(isset($type)){ echo $type;} ?></b></p>
     </div>
     <div id ="app">
-      <form id="fromToForm" align="center" onsubmit="return false;">
+      <form id="from-to-form" align="center" onsubmit="return false;">
         <select id="from">
           <option value="" disabled selected>From</option>
           <option v-for="city in cities">{{ city.cityName }}</option>
@@ -58,7 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </select>
         <button id="submit" v-on:click="fromToEnter()">Enter</button>
       </form>
-      <form id="volume-weight-form" align="center" style="display:none;">
+      <form id="volume-weight-form" align="center" style="display:none;" onsubmit="return false;">
         <div id="volume-div">
           <a>Volume</a>
           <input type="range" min="1" max="100" value="50" class="slider" id="volume-slider"> 
@@ -69,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           <input type="range" min="1" max="100" value="50" class="slider" id="weight-slider">
           <a>Kg</a>
         </div>
-        <button id="submit">Enter</button>
+        <button id="submit" v-on:click="volumeWeightEnter()">Enter</button>
       </form>
       <form id="containing-form" align="center" style="display:none;">
         <h3>Containing</h3>
@@ -161,9 +161,28 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               data: {'from':from,'to':to},
               cache: false,
               success: function(data, textStatus, jQxhr){
-              $("#fromToForm").hide() ;
+              $("#from-to-form").hide() ;
               $("<p align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#invoice-div"));
               $("#volume-weight-form").show();
+              },
+              error: function( jqXhr, textStatus, errorThrown ){
+              console.log( errorThrown );
+              }
+              })
+            },
+            volumeWeightEnter: function(){
+              var volume = $("#volume-slider").val();
+              var weight = $("#weight-slider").val();
+              $.ajax({
+              type: 'post',
+              dataType: 'text',
+              url: 'send',
+              data: {'volume':volume,'weight':weight},
+              cache: false,
+              success: function(data, textStatus, jQxhr){
+              $("#volume-weight-form").hide() ;
+              $("<p align='center'>Volume: " + volume + " Weight: " + weight + "</p>").appendTo($("#invoice-div"));
+              $("#containing-form").show();
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
