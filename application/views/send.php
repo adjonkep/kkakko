@@ -48,11 +48,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       <p align="center">I want to send a <?php if(isset($type)){ echo $type;} ?></p>
       <form id="fromToForm" align="center" onsubmit="return false;">
         <select id="from">
-          <option value="0">From</option>
+          <option value="" disabled selected>From</option>
           <option v-for="city in cities">{{ city.cityName }}</option>
         </select>
         <select id="to">
-          <option value="0">To</option>
+          <option value="" disabled selected>To</option>
           <option v-for="city in cities">{{ city.cityName }}</option>
         </select>
         <button id="submit" v-on:click="fromToEnter()">Enter</button>
