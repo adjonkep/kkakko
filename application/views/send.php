@@ -94,9 +94,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       </form>
       <form id="shipping-form" align="center" style="display:none;" onsubmit="return false;">
         <h3>Shipping Option</h3>
-        <input type="radio" value="standard"><b>Standard</b>, 5 days shipping<br>
-        <input type="radio" value="fast"><b>Fast</b>, 3 days shipping<br>
-        <input type="radio" value="Overnight"><b>Overight</b>, Tomorrow!
+        <input type="radio" value="standard" name="shipping-radio"><b>Standard</b>, 5 days shipping<br>
+        <input type="radio" value="fast" name="shipping-radio"><b>Fast</b>, 3 days shipping<br>
+        <input type="radio" value="Overnight" name="shipping-radio"><b>Overight</b>, Tomorrow!
         <div>
         <button id="price-button">Price</button>
         <button id="checkout-button">Checkout</button>
@@ -212,7 +212,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               })
             },
             valueEnter: function(){
-              var value = $("#value-text").text();
+              var value = $("#value-text").val();
               var currency = $("#currency option:selected").text();
               $.ajax({
               type: 'post',
