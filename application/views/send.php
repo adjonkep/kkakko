@@ -190,15 +190,15 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               })
             },
             containingEnter: function(){
-              var checked = "";
+              var selected = "";
               $('#checkbox-div input:checkbox').each(function () {
-              var checked = (this.checked ? $(this).val() : "");
+              selected = (this.checked ? $(this).val() : "");
               });
               $.ajax({
               type: 'post',
               dataType: 'text',
               url: 'send',
-              data: checked,
+              data: selected,
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#containing-form").hide() ;
