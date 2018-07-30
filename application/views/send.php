@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       </form>
       <form id="containing-form" align="center" style="display:none;" onsubmit="return false;">
         <h3>Containing</h3>
-        <div id="checkbnox-div">
+        <div id="checkbox-div">
           <input type="checkbox"  value="batteries">Batteries</input>
           <input type="checkbox"  value="fragile-items">Fragile Items</input>
           <input type="checkbox"  value="documents">Documents</input>
@@ -189,9 +189,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               }
               })
             },
-          containingEnter: function(){
+            containingEnter: function(){
               var checked = [];
-              $('input.yourClass:checkbox:checked').each(function () {
+              $('#checkbox-div:checkbox:checked').each(function () {
                 checked.push($(this).val());
               });
               $.ajax({
@@ -201,7 +201,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               data: checked,
               cache: false,
               success: function(data, textStatus, jQxhr){
-              $("#containing").hide() ;
+              $("#containing-form").hide() ;
               $("<p align='center'>"+checked+"</p>").appendTo($("#invoice-div"));
               $("#value-form").show();
               },
