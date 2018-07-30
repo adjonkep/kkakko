@@ -93,13 +93,13 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         <input type="submit" v-on:click="valueEnter()">
       </form>
       <form id="shipping-form" align="center" style="display:none;" onsubmit="return false;">
-        <h3>Shipping Option</h3>
+        <h3>Shipping Options</h3>
         <input type="radio" value="standard" name="shipping-radio"><b>Standard</b>, 5 days shipping<br>
         <input type="radio" value="fast" name="shipping-radio"><b>Fast</b>, 3 days shipping<br>
         <input type="radio" value="Overnight" name="shipping-radio"><b>Overight</b>, Tomorrow!
         <div>
         <button id="price-button">Price</button>
-        <button id="checkout-button">Checkout</button>
+        <button id="checkout-button" v-on:click="checkout()">Checkout</button>
         </div>
       </form>
     </div>    
@@ -222,8 +222,25 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#value-form").hide() ;
-              $("<p align='center'>Valued at: " + value + currency + "</p>").appendTo($("#invoice-div"));
+              $("<p align='center'>Valued at: " + value +" "+ currency + "</p>").appendTo($("#invoice-div"));
               $("#shipping-form").show();
+              },
+              error: function( jqXhr, textStatus, errorThrown ){
+              console.log( errorThrown );
+              }
+              })
+            },
+            checkout: function(){
+              var shipping = $("input[name='shipping-radio']:checked"). val();
+              $.ajax({
+              type: 'post',
+              dataType: 'text',
+              url: 'send',
+              data: {'shipping':shipping},
+              cache: false,
+              success: function(data, textStatus, jQxhr){
+              $("#shipping-form").hide() ;
+              $("<p align='center'>shipping options: " + shipping +"</p>").appendTo($("#invoice-div"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
