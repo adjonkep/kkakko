@@ -190,9 +190,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               })
             },
             containingEnter: function(){
-              var checked = [];
-              $('#checkbox-div:checkbox:checked').each(function () {
-                checked.push($(this).val());
+              var checked = "";
+              $('#checkbox-div input:checkbox').each(function () {
+              var checked = (this.checked ? $(this).val() : "");
               });
               $.ajax({
               type: 'post',
@@ -202,7 +202,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#containing-form").hide() ;
-              $("<p align='center'>"+checked+"</p>").appendTo($("#invoice-div"));
+              $("<p align='center'>Containing: "+checked+"</p>").appendTo($("#invoice-div"));
               $("#value-form").show();
               },
               error: function( jqXhr, textStatus, errorThrown ){
