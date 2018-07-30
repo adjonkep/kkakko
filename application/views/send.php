@@ -59,6 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         <button id="submit" v-on:click="fromToEnter()">Enter</button>
       </form>
       <form id="volume-weight-form" align="center" style="display:none;" onsubmit="return false;">
+        <h3>Volume and Weight</h3>
         <div id="volume-div">
           <a>Volume</a>
           <input type="range" min="1" max="100" value="50" class="slider" id="volume-slider"> 
@@ -74,22 +75,22 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       <form id="containing-form" align="center" style="display:none;" onsubmit="return false;">
         <h3>Containing</h3>
         <div id="checkbox-div">
-          <input type="checkbox"  value="batteries">Batteries</input>
-          <input type="checkbox"  value="fragile-items">Fragile Items</input>
-          <input type="checkbox"  value="documents">Documents</input>
-          <input type="checkbox"  value="irreplacables">Irreplacables</input>
+          <input type="checkbox"  value="batteries" name="content">Batteries</input>
+          <input type="checkbox"  value="fragile-items" name="content">Fragile Items</input>
+          <input type="checkbox"  value="documents" name="content">Documents</input>
+          <input type="checkbox"  value="irreplacables" name="content">Irreplacables</input>
         </div>
         <button id="submit" v-on:click="containingEnter()">Enter</button>
       </form>
       <form id="value-form" align="center" style="display:none;" onsubmit="return false;">
-        <h3>Valued at</h3>
+        <h3>Value</h3>
         <input type="text" id="value-text" placeholder="Value">
         <select id="currency">
           <option>Euro</option>
           <option>Dollar</option>
           <option>CFA</option>
         </select>
-        <input type="submit">
+        <input type="submit" v-on:click="valueEnter()">
       </form>
       <form id="shipping-form" align="center" style="display:none;" onsubmit="return false;">
         <h3>Shipping Option</h3>
@@ -190,9 +191,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               })
             },
             containingEnter: function(){
-              var selected = "";
-              $('#checkbox-div input:checkbox').each(function () {
-              selected = (this.checked ? $(this).val() : "");
+              var selected = [];
+              $.each($("input[name='content']:checked"), function(){            
+                selected.push($(this).val());
               });
               $.ajax({
               type: 'post',
@@ -204,6 +205,25 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#containing-form").hide() ;
               $("<p align='center'>Containing: "+selected+"</p>").appendTo($("#invoice-div"));
               $("#value-form").show();
+              },
+              error: function( jqXhr, textStatus, errorThrown ){
+              console.log( errorThrown );
+              }
+              })
+            },
+            valueEnter: function(){
+              var value = $("#value-text").text();
+              var currency = $("#currency option:selected").text();
+              $.ajax({
+              type: 'post',
+              dataType: 'text',
+              url: 'send',
+              data: {'value':value,'currency':currency},
+              cache: false,
+              success: function(data, textStatus, jQxhr){
+              $("#value-form").hide() ;
+              $("<p align='center'>Valued at: " + value + currency + "</p>").appendTo($("#invoice-div"));
+              $("#shipping-form").show();
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
