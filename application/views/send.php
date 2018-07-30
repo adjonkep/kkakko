@@ -71,9 +71,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
         <button id="submit" v-on:click="volumeWeightEnter()">Enter</button>
       </form>
-      <form id="containing-form" align="center" style="display:none;">
+      <form id="containing-form" align="center" style="display:none;" onsubmit="return false;">
         <h3>Containing</h3>
-        <div>
+        <div id="checkbnox-div">
           <input type="checkbox"  value="batteries">Batteries</input>
           <input type="checkbox"  value="fragile-items">Fragile Items</input>
           <input type="checkbox"  value="documents">Documents</input>
@@ -81,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
         <button id="submit">Enter</button>
       </form>
-      <form id="value-form" align="center" style="display:none;">
+      <form id="value-form" align="center" style="display:none;" onsubmit="return false;">
         <h3>Valued at</h3>
         <input type="text" id="value-text" placeholder="Value">
         <select id="currency">
@@ -91,7 +91,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </select>
         <input type="submit">
       </form>
-      <form id="shipping-form" align="center" style="display:none;">
+      <form id="shipping-form" align="center" style="display:none;" onsubmit="return false;">
         <h3>Shipping Option</h3>
         <input type="radio" value="standard"><b>Standard</b>, 5 days shipping<br>
         <input type="radio" value="fast"><b>Fast</b>, 3 days shipping<br>
@@ -189,7 +189,30 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               }
               })
             }
+          },
+          containingEnter: function(){
+              var checked = [];
+              $('input.yourClass:checkbox:checked').each(function () {
+                checked.push($(this).val());
+              });
+              $.ajax({
+              type: 'post',
+              dataType: 'text',
+              url: 'send',
+              data: checked,
+              cache: false,
+              success: function(data, textStatus, jQxhr){
+              $("#containing").hide() ;
+              $("<p align='center'>"+checked+"</p>").appendTo($("#invoice-div"));
+              $("#value-form").show();
+              },
+              error: function( jqXhr, textStatus, errorThrown ){
+              console.log( errorThrown );
+              }
+              })
+            }
           }
+
 
       })
     </script>
