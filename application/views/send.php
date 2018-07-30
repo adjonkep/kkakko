@@ -202,7 +202,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#containing-form").hide() ;
-              $("<p align='center'>Containing: "+checked+"</p>").appendTo($("#invoice-div"));
+              $("<p align='center'>Containing: "+selected+"</p>").appendTo($("#invoice-div"));
               $("#value-form").show();
               },
               error: function( jqXhr, textStatus, errorThrown ){
