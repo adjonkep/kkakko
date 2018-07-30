@@ -188,8 +188,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               console.log( errorThrown );
               }
               })
-            }
-          },
+            },
           containingEnter: function(){
               var checked = [];
               $('input.yourClass:checkbox:checked').each(function () {
@@ -212,8 +211,6 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               })
             }
           }
-
-
       })
     </script>
   </body>
