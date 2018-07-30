@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           <input type="checkbox"  value="documents">Documents</input>
           <input type="checkbox"  value="irreplacables">Irreplacables</input>
         </div>
-        <button id="submit">Enter</button>
+        <button id="submit" v-on:click="containingEnter()">Enter</button>
       </form>
       <form id="value-form" align="center" style="display:none;" onsubmit="return false;">
         <h3>Valued at</h3>
