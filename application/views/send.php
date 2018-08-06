@@ -167,7 +167,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#from-to-form").hide() ;
               $("<p id='from-to' align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#invoice-div"));
               $("#volume-weight-form").show();
-              vm.navigationStack.push($("#from-to-form"), $("#from-to"));
+              vm.navigationStack.push($("#from-to-form"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -187,7 +187,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#volume-weight-form").hide() ;
               $("<p id='volume-weight' align='center'>Volume: " + volume + " Weight: " + weight + "</p>").appendTo($("#invoice-div"));
               $("#containing-form").show();
-              vm.navigationStack.push($("#volume-weight-form"), $("#volume-weight"));
+              vm.navigationStack.push($("#volume-weight-form"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
