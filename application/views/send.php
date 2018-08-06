@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
       </div>
     </header>
-    <a class="btn btn-primary" href="welcome"><i class="fa fa-arrow-left"></i> Return</a>
+    <button class="btn btn-primary" onclick="goBack()"><i class="fa fa-arrow-left"></i> Return</button>
     <?php
     if (isset($_POST['parcel'])) {
         $type = $_POST['parcel'];
@@ -251,7 +251,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               })
             },
             goBack: function(){
-            
+              navigationStack.pop()[0].show();
+              navigationStack.pop()[1].show();
             }
           }
       })
