@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
       </div>
     </header>
-    <a class="btn btn-primary" href="welcome"><i class="fa fa-arrow-left"></i>Back</a>
+    <a class="btn btn-primary" href="welcome"><i class="fa fa-arrow-left"></i> Return</a>
     <?php
     if (isset($_POST['parcel'])) {
         $type = $_POST['parcel'];
@@ -149,7 +149,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       var vm = new Vue({
           el: '#app',
           data: { 
-              cities: <?php echo json_encode($infos)?>
+              cities: <?php echo json_encode($infos)?>,
+              navigationStack: []
           },
           methods: {
             fromToEnter: function(){
@@ -163,8 +164,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#from-to-form").hide() ;
-              $("<p align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#invoice-div"));
+              $("<p id='from-to' align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#invoice-div"));
               $("#volume-weight-form").show();
+              navigationStack.push("#from-to-form", "#from-to");
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -182,8 +184,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#volume-weight-form").hide() ;
-              $("<p align='center'>Volume: " + volume + " Weight: " + weight + "</p>").appendTo($("#invoice-div"));
+              $("<p id='volume-weight' align='center'>Volume: " + volume + " Weight: " + weight + "</p>").appendTo($("#invoice-div"));
               $("#containing-form").show();
+              navigationStack.push("#volume-weight-form", "#volume-weight");
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -203,7 +206,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#containing-form").hide() ;
-              $("<p align='center'>Containing: "+selected+"</p>").appendTo($("#invoice-div"));
+              $("<p id='containing' align='center'>Containing: "+selected+"</p>").appendTo($("#invoice-div"));
               $("#value-form").show();
               },
               error: function( jqXhr, textStatus, errorThrown ){
@@ -222,7 +225,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#value-form").hide() ;
-              $("<p align='center'>Valued at: " + value +" "+ currency + "</p>").appendTo($("#invoice-div"));
+              $("<p id='value' align='center'>Valued at: " + value +" "+ currency + "</p>").appendTo($("#invoice-div"));
               $("#shipping-form").show();
               },
               error: function( jqXhr, textStatus, errorThrown ){
@@ -240,12 +243,15 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               cache: false,
               success: function(data, textStatus, jQxhr){
               $("#shipping-form").hide() ;
-              $("<p align='center'>shipping options: " + shipping +"</p>").appendTo($("#invoice-div"));
+              $("<p id='shipping' align='center'>shipping options: " + shipping +"</p>").appendTo($("#invoice-div"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
               }
               })
+            },
+            goBack: function(){
+            
             }
           }
       })
