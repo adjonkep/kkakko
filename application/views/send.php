@@ -43,11 +43,12 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       $type = $_POST['courier'];
     }
     ?>
-    <div id="invoice-div">
-    <p align="center">I want to send a <b><?php if(isset($type)){ echo $type;} ?></b></p>
-    </div>
+    
     <div id ="app">
-    <button class="btn btn-primary" v-on:click="goBack()"><i class="fa fa-arrow-left"></i> Return</button>
+      <button class="btn btn-primary" v-on:click="goBack()"><i class="fa fa-arrow-left"></i> Return</button>
+      <div id="invoice-div">
+        <p align="center">I want to send a <b><?php if(isset($type)){ echo $type;} ?></b></p>
+      </div>
       <form id="from-to-form" align="center" onsubmit="return false;">
         <select id="from">
           <option value="" disabled selected>From</option>
@@ -151,7 +152,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           el: '#app',
           data: { 
               cities: <?php echo json_encode($infos)?>,
-              navigationStack: []
+              navigationStack: [[],[]]
           },
           methods: {
             fromToEnter: function(){
@@ -167,7 +168,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#from-to-form").hide() ;
               $("<p id='from-to' align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#invoice-div"));
               $("#volume-weight-form").show();
-              vm.navigationStack.push($("#from-to-form"));
+              vm.navigationStack[0].push($("#from-to-form"));
+              vm.navigationStack[1].push($("#from-to"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -187,7 +189,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#volume-weight-form").hide() ;
               $("<p id='volume-weight' align='center'>Volume: " + volume + " Weight: " + weight + "</p>").appendTo($("#invoice-div"));
               $("#containing-form").show();
-              vm.navigationStack.push($("#volume-weight-form"));
+              vm.navigationStack[0].push($("#volume-weight-form"));
+              vm.navigationStack[1].push($("#volume-weight"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -252,8 +255,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               })
             },
             goBack: function(){
-              vm.navigationStack.pop().show();
-              vm.navigationStack.pop().hide();
+              vm.navigationStack[0].pop().show();
+              vm.navigationStack[1].pop().hide();
             }
           }
       })
