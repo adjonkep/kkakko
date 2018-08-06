@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <p align="center">I want to send a <b><?php if(isset($type)){ echo $type;} ?></b></p>
     </div>
     <div id ="app">
-    <button class="btn btn-primary" onclick="goBack()"><i class="fa fa-arrow-left"></i> Return</button>
+    <button class="btn btn-primary" v-on:click="goBack()"><i class="fa fa-arrow-left"></i> Return</button>
       <form id="from-to-form" align="center" onsubmit="return false;">
         <select id="from">
           <option value="" disabled selected>From</option>
