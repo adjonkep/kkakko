@@ -171,6 +171,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#volume-weight-form").show();
               vm.navigationStack[0].push($("#from-to-form"));
               vm.navigationStack[1].push($("#from-to"));
+              vm.navigationStack[0].push($("#volume-weight-form"));
+              vm.navigationStack[1].push($("#volume-weight"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -190,8 +192,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#volume-weight-form").hide() ;
               $("<p id='volume-weight' align='center'>Volume: " + volume + " Weight: " + weight + "</p>").appendTo($("#invoice-div"));
               $("#containing-form").show();
-              vm.navigationStack[0].push($("#volume-weight-form"));
-              vm.navigationStack[1].push($("#volume-weight"));
+              
+              vm.navigationStack[0].push($("#containing-form"));
+              vm.navigationStack[1].push($("#containing"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -213,8 +216,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#containing-form").hide() ;
               $("<p id='containing' align='center'>Containing: "+selected+"</p>").appendTo($("#invoice-div"));
               $("#value-form").show();
-              vm.navigationStack[0].push($("#containing-form"));
-              vm.navigationStack[1].push($("#containing"));
+              
+              vm.navigationStack[0].push($("#value-form"));
+              vm.navigationStack[1].push($("#value"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -234,8 +238,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#value-form").hide() ;
               $("<p id='value' align='center'>Valued at: " + value +" "+ currency + "</p>").appendTo($("#invoice-div"));
               $("#shipping-form").show();
-              vm.navigationStack[0].push($("#value-form"));
-              vm.navigationStack[1].push($("#value"));
+              
+              vm.navigationStack[0].push($("#shipping-form"));
+              vm.navigationStack[1].push($("#shipping"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -253,8 +258,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               success: function(data, textStatus, jQxhr){
               $("#shipping-form").hide() ;
               $("<p id='shipping' align='center'>shipping options: " + shipping +"</p>").appendTo($("#invoice-div"));
-              vm.navigationStack[0].push($("#shipping-form"));
-              vm.navigationStack[1].push($("#shipping"));
+              
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -263,7 +267,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             },
             goBack: function(){
               vm.navigationStack[0].pop().show();
-              vm.navigationStack[0].hide();
+              vm.navigationStack[0].peek().hide();
               vm.navigationStack[1].pop().hide();
             }
           }
