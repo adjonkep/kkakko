@@ -271,7 +271,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             goBack: function(){
               vm.navigationStack[0].pop().hide();
               var holdingElement = vm.navigationStack[0][vm.navigationStack.length - 1];
-              holdingElement.show();
+              alert(holdingElement);
               vm.navigationStack[1].pop().hide();
             }
           }
