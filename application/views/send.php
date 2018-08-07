@@ -170,7 +170,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#from-to-form").hide() ;
               $("<p id='from-to' align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#invoice-div"));
               $("#volume-weight-form").show();
-              //vm.navigationStackElements.push($("#from-to-form"));
+              vm.navigationStackElements.push($("#from-to-form"));
               vm.navigationStackParagraphs.push($("#from-to"));
               vm.navigationStackElements.push($("#volume-weight-form"));
              
