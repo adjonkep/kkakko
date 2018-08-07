@@ -270,9 +270,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               })
             },
             goBack: function(){
+              if(vm.navigationStackElements.length > 1){
                 vm.navigationStackElements.pop().hide();
                 vm.navigationStackElements[vm.navigationStackElements.length - 1].show();
                 vm.navigationStackParagraphs.pop().remove();
+              }
             }
           }
       })
