@@ -262,6 +262,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               success: function(data, textStatus, jQxhr){
               $("#shipping-form").hide() ;
               $("<p id='shipping' align='center'>shipping options: " + shipping +"</p>").appendTo($("#invoice-div"));
+              vm.navigationStackElements.push($("#shipping-form"))
               vm.navigationStackParagraphs.push($("#shipping"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
