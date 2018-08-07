@@ -153,7 +153,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           el: '#app',
           data: { 
               cities: <?php echo json_encode($infos)?>,
-              navigationStack: [[],[]]
+              navigationStackElements: [],
+              navigationStackParagraphs: []
           },
           methods: {
             fromToEnter: function(){
@@ -169,9 +170,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#from-to-form").hide() ;
               $("<p id='from-to' align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#invoice-div"));
               $("#volume-weight-form").show();
-              vm.navigationStack[0].push($("#from-to-form"));
-              vm.navigationStack[1].push($("#from-to"));
-              vm.navigationStack[0].push($("#volume-weight-form"));
+              vm.navigationStackElements.push($("#from-to-form"));
+              vm.navigationStackParagraphs.push($("#from-to"));
+              vm.navigationStackElements.push($("#volume-weight-form"));
              
               },
               error: function( jqXhr, textStatus, errorThrown ){
@@ -193,8 +194,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("<p id='volume-weight' align='center'>Volume: " + volume + " Weight: " + weight + "</p>").appendTo($("#invoice-div"));
               $("#containing-form").show();
               
-              vm.navigationStack[0].push($("#containing-form"));
-              vm.navigationStack[1].push($("#volume-weight"));
+              vm.navigationStackElements.push($("#containing-form"));
+              vm.navigationStackParagraphs.push($("#volume-weight"));
               
               },
               error: function( jqXhr, textStatus, errorThrown ){
@@ -218,8 +219,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("<p id='containing' align='center'>Containing: "+selected+"</p>").appendTo($("#invoice-div"));
               $("#value-form").show();
               
-              vm.navigationStack[0].push($("#value-form"));
-              vm.navigationStack[1].push($("#containing"));
+              vm.navigationStackElements.push($("#value-form"));
+              vm.navigationStackParagraphs.push($("#containing"));
               
               },
               error: function( jqXhr, textStatus, errorThrown ){
@@ -241,8 +242,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("<p id='value' align='center'>Valued at: " + value +" "+ currency + "</p>").appendTo($("#invoice-div"));
               $("#shipping-form").show();
               
-              vm.navigationStack[0].push($("#shipping-form"));
-              vm.navigationStack[1].push($("#value"));
+              vm.navigationStackElements.push($("#shipping-form"));
+              vm.navigationStackParagraphs.push($("#value"));
               
               },
               error: function( jqXhr, textStatus, errorThrown ){
@@ -261,7 +262,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               success: function(data, textStatus, jQxhr){
               $("#shipping-form").hide() ;
               $("<p id='shipping' align='center'>shipping options: " + shipping +"</p>").appendTo($("#invoice-div"));
-              vm.navigationStack[1].push($("#shipping"));
+              vm.navigationStackParagraphs.push($("#shipping"));
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -269,9 +270,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               })
             },
             goBack: function(){
-              vm.navigationStack[0].pop().hide();
-              vm.navigationStack[0][vm.navigationStack[0].length - 1].show();
-              vm.navigationStack[1].pop().hide();
+              vm.navigationStackElements.pop().hide();
+              vm.navigationStackElements[vm.navigationStackElements.length - 1].show();
+              vm.navigationStackParagraphs.pop().hide();
             }
           }
       })
