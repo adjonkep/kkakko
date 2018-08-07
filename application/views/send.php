@@ -170,7 +170,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#from-to-form").hide() ;
               $("<p id='from-to' align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#invoice-div"));
               $("#volume-weight-form").show();
-              vm.navigationStackElements.push($("#from-to-form"));
+              //vm.navigationStackElements.push($("#from-to-form"));
               vm.navigationStackParagraphs.push($("#from-to"));
               vm.navigationStackElements.push($("#volume-weight-form"));
              
@@ -270,9 +270,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               })
             },
             goBack: function(){
-              vm.navigationStackElements.pop().hide();
-              vm.navigationStackElements[vm.navigationStackElements.length - 1].show();
-              vm.navigationStackParagraphs.pop().remove();
+                vm.navigationStackElements.pop().hide();
+                vm.navigationStackElements[vm.navigationStackElements.length - 1].show();
+                vm.navigationStackParagraphs.pop().remove();
             }
           }
       })
