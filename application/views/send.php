@@ -105,6 +105,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         <button id="checkout-button" v-on:click="checkout()">Checkout</button>
         </div>
       </form>
+      <form id="order-form" align="center" style="display:none;">
+        <button class="btn btn-primary" id="order-button">Confirm Order</button>
+      </form>
     </div>    
     <footer>
       <div class="footer-div">
@@ -260,10 +263,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               data: {'shipping':shipping},
               cache: false,
               success: function(data, textStatus, jQxhr){
-              $("#shipping-form").hide() ;
+              $("#shipping-form").hide();
               $("<p id='shipping' align='center'>shipping options: " + shipping +"</p>").appendTo($("#invoice-div"));
               vm.navigationStackElements.push($("#shipping-form"))
               vm.navigationStackParagraphs.push($("#shipping"));
+              $("#order-form").show();
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
