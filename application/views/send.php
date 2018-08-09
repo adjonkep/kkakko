@@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         <button id="checkout-button" v-on:click="checkout()">Checkout</button>
         </div>
       </form>
-      <form id="order-form" align="center" style="display:none;">
+      <form id="order-form" align="center" style="display:none;" onsubmit="return false;">
         <button class="btn btn-primary" id="order-button">Confirm Order</button>
       </form>
     </div>    
