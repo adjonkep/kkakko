@@ -236,12 +236,12 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               vm.navigationStackElements.push($("#value-form"));
               vm.navigationStackParagraphs.push($("#containing"));
               
-              }
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
               }
               })
+            }
             },
             valueEnter: function(){
               var value = $("#value-text").val();
@@ -265,12 +265,12 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               vm.navigationStackElements.push($("#shipping-form"));
               vm.navigationStackParagraphs.push($("#value"));
               
-              }
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
               }
               })
+            }
             },
             checkout: function(){
               var shipping = $("input[name='shipping-radio']:checked"). val();
