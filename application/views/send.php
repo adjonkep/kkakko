@@ -189,12 +189,6 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               })
             }
             },
-            validateFromTo: function(){
-              if($("#from option:selected").text() =="From" || $("#to option:selected").text() == "To"){
-                alert("Please select Cities!");
-                return false;
-              }
-            },
             volumeWeightEnter: function(){
               var volume = $("#volume-slider").val();
               var weight = $("#weight-slider").val();
@@ -223,6 +217,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $.each($("input[name='content']:checked"), function(){            
                 selected.push($(this).val());
               });
+              if (selected.length == 0){
+                alert("Please Select an Option!");
+                return false;
+              }
+              else{
               $.ajax({
               type: 'post',
               dataType: 'text',
@@ -237,6 +236,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               vm.navigationStackElements.push($("#value-form"));
               vm.navigationStackParagraphs.push($("#containing"));
               
+              }
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -246,6 +246,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             valueEnter: function(){
               var value = $("#value-text").val();
               var currency = $("#currency option:selected").text();
+              if(value == null){
+                alert("Please Enter the Value of your item!");
+                return false;
+              }
+              else{
               $.ajax({
               type: 'post',
               dataType: 'text',
@@ -260,6 +265,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               vm.navigationStackElements.push($("#shipping-form"));
               vm.navigationStackParagraphs.push($("#value"));
               
+              }
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -268,6 +274,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             },
             checkout: function(){
               var shipping = $("input[name='shipping-radio']:checked"). val();
+              if (shipping == null){
+                alert("Please Select Shipping Method!");
+                return false;
+              }
+              else{
               $.ajax({
               type: 'post',
               dataType: 'text',
@@ -285,6 +296,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               console.log( errorThrown );
               }
               })
+            }
             },
             goBack: function(){
               if(vm.navigationStackElements.length > 1){
