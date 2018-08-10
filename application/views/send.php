@@ -229,7 +229,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               data: selected,
               cache: false,
               success: function(data, textStatus, jQxhr){
-              $("#containing-form").hide() ;
+              $("#containing-form").hide();
               $("<p id='containing' align='center'>Containing: "+selected+"</p>").appendTo($("#invoice-div"));
               $("#value-form").show();
               
