@@ -163,6 +163,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             fromToEnter: function(){
               var from = $("#from option:selected").text();
               var to = $("#to option:selected").text();
+              if(from =="From" || to == "To"){
+                alert("Please select Cities!");
+                return false;
+              }
+              else{
               $.ajax({
               type: 'post',
               dataType: 'text',
@@ -182,6 +187,13 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               console.log( errorThrown );
               }
               })
+            }
+            },
+            validateFromTo: function(){
+              if($("#from option:selected").text() =="From" || $("#to option:selected").text() == "To"){
+                alert("Please select Cities!");
+                return false;
+              }
             },
             volumeWeightEnter: function(){
               var volume = $("#volume-slider").val();
