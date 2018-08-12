@@ -246,8 +246,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             valueEnter: function(){
               var value = $("#value-text").val();
               var currency = $("#currency option:selected").text();
-              if(isNaN(value) || value <= 0){
-                alert("Please Review the Value of your item!");
+              if(isNaN(value) || value <=0){
+                alert("Please Enter the Value of your item!");
                 return false;
               }
               else{
