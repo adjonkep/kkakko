@@ -151,7 +151,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       appId      : '240814613228994',
       cookie     : true,
       xfbml      : true,
-      version    : '{api-version}'
+      version    : 'v3.1'
     });
       
     FB.AppEvents.logPageView();   
@@ -165,7 +165,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
      js.src = "https://connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-</script>Copy Code
+</script>
 
     <script>
 
