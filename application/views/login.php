@@ -27,31 +27,13 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             <img src="<?php echo base_url(); ?>assets/images/kkakko-logos-13.png">
           </a>
         </div>
-        <div class="header-util">
-            <button class="w3-button">Login</button>
-            <button class="w3-button">Register</button>
-        </div>
       </div>
     </header>
-    <div class="welcome-div">
-      <h3 align="center">Bienvenue sur <span class="logo-inside"><img alt="KkakKo Logo" class="img-responsive" src="<?php echo base_url(); ?>assets/images/kkakko.png"/></span>,</br>Votre nouvelle fa&ccedil;on d&#39;exp&eacute;dier courriers et petits colis &agrave; travers le monde.</h3>
-    </div>
-    <?php
-    session_start($newdata = array(
-        'username'  => 'johndoe',
-        'email'     => 'johndoe@some-site.com',
-        'logged_in' => FALSE
-    ););
     
-    $this->session->set_userdata($newdata);
+    <?php
+    session_start();
     ?>
-    <div class="send-div" align="center">
-      <form action="index.php/send" method="post">
-        <p class="send-label-div">I want to send</p>
-        <input type="submit" class="btn btn-primary my-2" name='parcel' value="parcel">
-        <input type="submit" class="btn btn-primary my-2" name='courier' value="courier">
-      </form>
-    </div>
+    
     <footer>
       <div class="footer-div">
       <div class="footer-left">
@@ -86,5 +68,26 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '240814613228994',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v3.1'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
   </body>
 </html>
