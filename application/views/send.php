@@ -103,7 +103,6 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         <input type="radio" value="fast" name="shipping-radio"><b>Fast</b>, 3 days shipping<br>
         <input type="radio" value="Overnight" name="shipping-radio"><b>Overight</b>, Tomorrow!
         <div>
-        <button id="price-button">Price</button>
         <button id="checkout-button" v-on:click="checkout()">Checkout</button>
         </div>
       </form>
@@ -308,6 +307,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
                 vm.navigationStackElements[vm.navigationStackElements.length - 1].show();
                 vm.navigationStackParagraphs.pop().remove();
                 $("#order-form").hide();
+              }
+              else if(vm.navigationStackElements.length = 1){
+                window.location = "dev.kkakko.com";
               }
             },
             loginStatus: function(){
