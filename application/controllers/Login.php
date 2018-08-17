@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Send extends CI_Controller {
+class Login extends CI_Controller {
 	public function __Construct(){
 		parent::__Construct ();
 		$this->load->library('session');
