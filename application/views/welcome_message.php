@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         'username'  => 'johndoe',
         'email'     => 'johndoe@some-site.com',
         'logged_in' => FALSE
-    ););
+    ));
     
     $this->session->set_userdata($newdata);
     ?>
