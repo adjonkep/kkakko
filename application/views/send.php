@@ -34,9 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
       </div>
     </header>
-    <?php
-    session_start();
-    ?>
+    
 
     <?php
     if (isset($_POST['parcel'])) {

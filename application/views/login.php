@@ -30,9 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       </div>
     </header>
     
-    <?php
-    session_start();
-    ?>
+    
     
     <footer>
       <div class="footer-div">
