@@ -309,7 +309,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
                 $("#order-form").hide();
               }
               else if(vm.navigationStackElements.length = 1){
-                window.location = "dev.kkakko.com";
+                window.location.href = "dev.kkakko.com";
               }
             },
             loginStatus: function(){
