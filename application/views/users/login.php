@@ -29,9 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
       </div>
     </header>
-    
-    
-    
+       
     <footer>
       <div class="footer-div">
       <div class="footer-left">
