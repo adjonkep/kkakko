@@ -318,7 +318,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
                 alert("user logged in!");
               }
               else if(status == ""){
-                window.location = "login";
+                window.location = "users/login";
               }
             }
           }
