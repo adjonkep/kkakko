@@ -18,7 +18,12 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/kkakko.css" >
   </head>
-
+  <?php $user_data = array(
+						'user_id' => $user_id,
+						'username' => $username,
+						'logged_in' => true
+          );
+          $this->session->set_userdata($user_data);?>
   <body>
     <header>
       <div class="topnav">

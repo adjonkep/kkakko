@@ -309,7 +309,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
                 $("#order-form").hide();
               }
               else if(vm.navigationStackElements.length = 1){
-                window.location.href = "";
+                window.location.href = "welcome";
               }
             },
             loginStatus: function(){
