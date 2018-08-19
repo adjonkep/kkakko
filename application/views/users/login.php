@@ -2,6 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html lang="en">
+<?php
+if (isset($this->session->userdata['logged_in'])) {
+
+
+}
+?>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <meta name="author" content="">
     <link rel="icon" href="//kkakko.com/uploads/site_favicon.png">
 
-    <title>KkaKko - Reinventing International Delivery</title>
+    <title>KkaKko - Login Form</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css"  >
@@ -29,6 +35,43 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
       </div>
     </header>
+
+    <?php
+if (isset($logout_message)) {
+echo "<div class='message'>";
+echo $logout_message;
+echo "</div>";
+}
+?>
+<?php
+if (isset($message_display)) {
+echo "<div class='message'>";
+echo $message_display;
+echo "</div>";
+}
+?>
+<div id="main">
+<div id="login">
+<h2>Login Form</h2>
+<hr/>
+<?php echo form_open('user_authentication/user_login_process'); ?>
+<?php
+echo "<div class='error_msg'>";
+if (isset($error_message)) {
+echo $error_message;
+}
+echo validation_errors();
+echo "</div>";
+?>
+<label>UserName :</label>
+<input type="text" name="username" id="name" placeholder="username"/><br /><br />
+<label>Password :</label>
+<input type="password" name="password" id="password" placeholder="**********"/><br/><br />
+<input type="submit" value=" Login " name="submit"/><br />
+<a href="<?php echo base_url() ?>index.php/user_authentication/user_registration_show">To SignUp Click Here</a>
+<?php echo form_close(); ?>
+</div>
+</div>
        
     <footer>
       <div class="footer-div">
