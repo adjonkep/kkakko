@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 echo "<div class='error_msg'>";
 echo validation_errors();
 echo "</div>";
-echo form_open('Users/register');
+echo form_open('registration_form');
 
 echo form_label('Create Username : ');
 echo"<br/>";
@@ -65,7 +65,7 @@ echo"<br/>";
 echo form_submit('submit', 'Sign Up');
 echo form_close();
 ?>
-<a href="<?php echo base_url() ?> ">For Login Click Here</a>
+<a href="<?php echo base_url() ?>index.php/login">For Login Click Here</a>
 </div>
 </div> 
     <footer>
