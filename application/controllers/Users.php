@@ -14,18 +14,9 @@
 			$this->load->library('session');
 			
 			// Load database
-			//$this->load->model('login_database');
+			$this->load->model('LoginModel');
 			}
 
-			// Show login page
-		public function index() {
-			$this->load->view('login_form');
-		}
-	
-			// Show registration page
-		public function user_registration_show() {
-			$this->load->view('registration_form');
-		}
 		// Register user
 		public function register(){
 			$data['title'] = 'Sign Up';

@@ -54,7 +54,7 @@ echo "</div>";
 <div id="login">
 <h2>Login Form</h2>
 <hr/>
-<?php echo form_open('user_authentication/user_login_process'); ?>
+<?php echo form_open('Users/login'); ?>
 <?php
 echo "<div class='error_msg'>";
 if (isset($error_message)) {

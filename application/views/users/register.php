@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 echo "<div class='error_msg'>";
 echo validation_errors();
 echo "</div>";
-echo form_open('user_authentication/new_user_registration');
+echo form_open('Users/register');
 
 echo form_label('Create Username : ');
 echo"<br/>";
