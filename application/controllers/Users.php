@@ -26,7 +26,7 @@
 			$this->form_validation->set_rules('password', 'Password', 'required');
 			$this->form_validation->set_rules('password2', 'Confirm Password', 'matches[password]');
 			if($this->form_validation->run() === FALSE){
-				$this->load->view('index.php/users/register', $data);
+				$this->load->view('users/register', $data);
 			} else {
 				// Encrypt password
 				$enc_password = md5($this->input->post('password'));
