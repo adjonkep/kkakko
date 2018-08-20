@@ -26,8 +26,9 @@
 		public function register(){
 			$data['title'] = 'Sign Up';
 			$this->form_validation->set_rules('name', 'Name', 'required');
-			$this->form_validation->set_rules('username', 'Username', 'required|callback_check_username_exists');
-			$this->form_validation->set_rules('email', 'Email', 'required|callback_check_email_exists');
+			//$this->form_validation->set_rules('username', 'Username', 'required|callback_check_username_exists');
+			$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
+			$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean');
 			$this->form_validation->set_rules('password', 'Password', 'required');
 			$this->form_validation->set_rules('password2', 'Confirm Password', 'matches[password]');
 			if($this->form_validation->run() === FALSE){
@@ -52,10 +53,12 @@
 				
 				// Get username
 				$username = $this->input->post('username');
+				//Get email
+				$email = $this->input->post('email');
 				// Get and encrypt the password
 				$password = md5($this->input->post('password'));
 				// Login user
-				$user_id = $this->user_model->login($username, $password);
+				$user_id = $this->LoginModel->login($user_data);
 				if($user_id){
 					// Create session
 					$user_data = array(
@@ -87,7 +90,7 @@
 		// Check if username exists
 		public function check_username_exists($username){
 			$this->form_validation->set_message('check_username_exists', 'That username is taken. Please choose a different one');
-			if($this->user_model->check_username_exists($username)){
+			if($this->LoginModel->check_username_exists($username)){
 				return true;
 			} else {
 				return false;
@@ -96,7 +99,7 @@
 		// To do: mailchimp integrations
 		public function check_email_exists($email){
 			$this->form_validation->set_message('check_email_exists', 'That email is taken. Please choose a different one');
-			if($this->user_model->check_email_exists($email)){
+			if($this->LoginModel->check_email_exists($email)){
 				return true;
 			} else {
 				return false;
