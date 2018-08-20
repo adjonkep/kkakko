@@ -25,7 +25,7 @@
 		// Register user
 		public function register(){
 			$data['title'] = 'Sign Up';
-			$this->form_validation->set_rules('name', 'Name', 'required');
+			//$this->form_validation->set_rules('name', 'Name', 'required');
 			//$this->form_validation->set_rules('username', 'Username', 'required|callback_check_username_exists');
 			//$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
 			$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean');
