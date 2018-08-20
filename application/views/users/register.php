@@ -39,9 +39,9 @@ echo validation_errors();
 echo "</div>";
 echo form_open('index.php/users/register');
 
-echo form_label('Create Username : ');
-echo"<br/>";
-echo form_input('username');
+//echo form_label('Create Username : ');
+//echo"<br/>";
+//echo form_input('username');
 echo "<div class='error_msg'>";
 if (isset($message_display)) {
 echo $message_display;
@@ -60,6 +60,10 @@ echo"<br/>";
 echo form_label('Password : ');
 echo"<br/>";
 echo form_password('password');
+echo"<br/>";
+echo form_label('Confirm Password : ');
+echo"<br/>";
+echo form_password('password2');
 echo"<br/>";
 echo"<br/>";
 echo form_submit('submit', 'Sign Up');
