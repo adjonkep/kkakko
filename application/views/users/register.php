@@ -50,11 +50,7 @@ echo "</div>";
 echo"<br/>";
 echo form_label('Email : ');
 echo"<br/>";
-$data = array(
-'type' => 'email',
-'name' => 'email_value'
-);
-echo form_input($data);
+echo form_input('email');
 echo"<br/>";
 echo"<br/>";
 echo form_label('Password : ');
