@@ -45,14 +45,14 @@
 		// Log in user
 		public function login(){
 			$data['title'] = 'Sign In';
-			$this->form_validation->set_rules('username', 'Username', 'required');
+			$this->form_validation->set_rules('email', 'Email', 'required');;
 			$this->form_validation->set_rules('password', 'Password', 'required');
 			if($this->form_validation->run() === FALSE){
 				$this->load->view('users/login', $data);
 			} else {
 				
 				// Get username
-				$username = $this->input->post('username');
+				//$username = $this->input->post('username');
 				//Get email
 				$email = $this->input->post('email');
 				// Get and encrypt the password
