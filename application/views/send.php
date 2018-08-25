@@ -330,7 +330,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               }
             },
             loginStatus: function(){
-              alert("The Login status is: " + <?php echo isset($_SESSION['logged']);?>);
+              alert("The Login status is: " + <?php echo isset($_SESSION['name']);?>);
             }
           }
       })
