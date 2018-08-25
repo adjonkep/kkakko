@@ -36,6 +36,14 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <div class="welcome-div">
       <h3 align="center">Bienvenue sur <span class="logo-inside"><img alt="KkakKo Logo" class="img-responsive" src="<?php echo base_url(); ?>assets/images/kkakko.png"/></span>,</br>Votre nouvelle fa&ccedil;on d&#39;exp&eacute;dier courriers et petits colis &agrave; travers le monde.</h3>
     </div>
+    <?php
+    $newdata = array(
+        'username'  => 'johndoe',
+        'email'     => 'johndoe@some-site.com',
+        'logged_in' => TRUE
+    );
+    $this->session->set_userdata($newdata);
+    ?>
     <div class="send-div" align="center">
       <form action="index.php/send" method="post">
         <p class="send-label-div">I want to send</p>
