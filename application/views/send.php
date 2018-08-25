@@ -43,6 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       $type = $_POST['courier'];
     }
     ?>
+
     
     <div id ="app">
       <button class="btn btn-primary" v-on:click="goBack()"><i class="fa fa-arrow-left"></i> Return</button>
@@ -106,7 +107,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         </div>
       </form>
       <form id="order-form" align="center" style="display:none;" onsubmit="return false;">
-        <button class="btn btn-primary" id="order-button">Confirm Order</button>
+        <button class="btn btn-primary" id="order-button" v-on:click="loginStatus()">Confirm Order</button>
       </form>
     </div>    
     <footer>
@@ -327,6 +328,9 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
                 vm.navigationStackParagraphs.pop().remove();
                 $("#order-form").hide();
               }
+            },
+            loginStatus: function(){
+              alert("The Login status is: " + <?php $this->session->has_userdata('logged_in');?>);
             }
           }
       })
