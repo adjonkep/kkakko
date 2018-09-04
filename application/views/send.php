@@ -43,11 +43,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <?php
     if (isset($_POST['parcel'])) {
         $type = $_POST['parcel'];
-        $sendInfo[0] = $type;
+        //$sendInfo[0] = $type;
     }
     elseif (isset($_POST['courier'])) {
       $type = $_POST['courier'];
-      $sendInfo[0] = $type;
+      //$sendInfo[0] = $type;
     }
     ?>
 
@@ -165,7 +165,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           data: { 
               cities: <?php echo json_encode($infos)?>,
               navigationStackElements: [],
-              navigationStackParagraphs: []
+              navigationStackParagraphs: [],
+              sendingInfo: []
           },
           methods: {
             fromToEnter: function(){
@@ -186,8 +187,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#from-to-form").hide() ;
               $("<p id='from-to' align='center'>From: " + from + " To: " + to + "</p>").appendTo($("#invoice-div"));
               $("#volume-weight-form").show();
-              <?php $sendInfo[1] = from; ?>
-              <?php $sendInfo[2] = to; ?>
+              vm.sendingInfo[0] = from;
+              vm.sendingInfo[1] = to;
               vm.navigationStackElements.push($("#from-to-form"));
               vm.navigationStackParagraphs.push($("#from-to"));
               vm.navigationStackElements.push($("#volume-weight-form"));
@@ -212,7 +213,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#volume-weight-form").hide() ;
               $("<p id='volume-weight' align='center'>Volume: " + volume + " Weight: " + weight + "</p>").appendTo($("#invoice-div"));
               $("#containing-form").show();
-              $sendInfo[3] = weight;
+              vm.sendingInfo[2] = weight;
               vm.navigationStackElements.push($("#containing-form"));
               vm.navigationStackParagraphs.push($("#volume-weight"));
               
@@ -242,7 +243,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#containing-form").hide();
               $("<p id='containing' align='center'>Containing: "+selected+"</p>").appendTo($("#invoice-div"));
               $("#value-form").show();
-              $sendInfo[4] = selected;
+              vm.sendingInfo[3] = selected;
               vm.navigationStackElements.push($("#value-form"));
               vm.navigationStackParagraphs.push($("#containing"));
               
@@ -271,7 +272,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               $("#value-form").hide() ;
               $("<p id='value' align='center'>Valued at: " + value +" "+ currency + "</p>").appendTo($("#invoice-div"));
               $("#shipping-form").show();
-              $sendInfo[5] = value;
+              vm.sendingInfo[4] = value;
               vm.navigationStackElements.push($("#shipping-form"));
               vm.navigationStackParagraphs.push($("#value"));
               
@@ -298,7 +299,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               success: function(data, textStatus, jQxhr){
               $("#shipping-form").hide();
               $("<p id='shipping' align='center'>shipping options: " + shipping +"</p>").appendTo($("#invoice-div"));
-              $sendInfo[6] = shipping;
+              vm.sendingInfo[5] = shipping;
               vm.navigationStackElements.push($("#shipping-form"))
               vm.navigationStackParagraphs.push($("#shipping"));
               $("#order-form").show();
@@ -322,6 +323,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             },
             loginStatus: function(){
               var status = "<?php echo $this->session->userdata('logged_in');?>";
+              <?php $sendInfo = vm.sendingInfo; ?>;
               if (status == 1){
                 alert("user logged in!");
               }
