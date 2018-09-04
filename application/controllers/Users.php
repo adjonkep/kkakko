@@ -29,7 +29,7 @@
 			//$this->form_validation->set_rules('username', 'Username', 'required|callback_check_username_exists');
 			//$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
 			$this->form_validation->set_rules('email', 'Email', 'required');
-			$this->form_validation->set_rules('password', 'Password', 'required');
+			$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
 			$this->form_validation->set_rules('password2', 'Confirm Password', 'matches[password]');
 			if($this->form_validation->run() === FALSE){
 				$this->load->view('users/register', $data);
