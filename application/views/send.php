@@ -327,7 +327,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
                 alert("user logged in!");
               }
               else if(status == ""){
-                alert(<?php $sendInfo = vm.sendingInfo; echo json_encode($sendInfo); ?>);
+                alert(<?php json_encode($sendInfo).concat(vm.sendingInfo); echo json_encode($sendInfo); ?>);
                 window.location = "users/register";
               }
             }
