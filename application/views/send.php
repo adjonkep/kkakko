@@ -43,11 +43,11 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <?php
     if (isset($_POST['parcel'])) {
         $type = $_POST['parcel'];
-        //$sendInfo[0] = $type;
+        $sendInfo[0] = $type;
     }
     elseif (isset($_POST['courier'])) {
       $type = $_POST['courier'];
-      //$sendInfo[0] = $type;
+      $sendInfo[0] = $type;
     }
     ?>
 
@@ -323,12 +323,12 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             },
             loginStatus: function(){
               var status = "<?php echo $this->session->userdata('logged_in');?>";
-              <?php $sendInfo = vm.sendingInfo; ?>;
+              //<?php $sendInfo = vm.sendingInfo; ?>;
               if (status == 1){
                 alert("user logged in!");
               }
               else if(status == ""){
-                alert("<?php $sendInfo; ?>");
+                alert("<?php echo $sendInfo; ?>");
                 window.location = "users/register";
               }
             }
