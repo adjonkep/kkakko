@@ -323,7 +323,6 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             },
             loginStatus: function(){
               var status = "<?php echo $this->session->userdata('logged_in');?>";
-              //<?php $sendInfo = vm.sendingInfo; ?>;
               if (status == 1){
                 alert("user logged in!");
               }
