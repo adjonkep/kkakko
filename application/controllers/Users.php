@@ -45,6 +45,7 @@
 				$result = $this->LoginModel->registration_insert($data);
 				if ($result == TRUE) {
 				$this->load->view('confirm', $data);
+				
 				} else {
 				$this->load->view('confirm', $data);
 				}
