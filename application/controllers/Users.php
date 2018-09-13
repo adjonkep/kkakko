@@ -24,7 +24,7 @@
 
 		// Register user
 		public function register(){
-			$data['title'] = 'Sign Up';
+			//$data['title'] = 'Sign Up';
 			//$this->form_validation->set_rules('name', 'Name', 'required');
 			//$this->form_validation->set_rules('username', 'Username', 'required|callback_check_username_exists');
 			//$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
@@ -36,10 +36,19 @@
 			} else {
 				// Encrypt password
 				$enc_password = md5($this->input->post('password'));
-				$this->LoginModel->register($enc_password);
+				$data = array(
+					'email' => $this->input->post('email'),
+					'password' => $enc_password
+					);
+				$result = $this->LoginModel->registration_insert($data);
+				if ($result == TRUE) {
+				$this->load->view('confirm', $data);
+				} else {
+				$this->load->view('confirm', $data);
+				}
 				// Set message
-				$this->session->set_flashdata('user_registered', 'You are now registered and can log in');
-				redirect('index.php/send');
+				//$this->session->set_flashdata('user_registered', 'You are now registered and can log in');
+				//redirect('index.php/send');
 			}
 		}
 		// Log in user
