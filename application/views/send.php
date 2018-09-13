@@ -329,7 +329,6 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               else if(status == ""){
                 vm.sendingInfo.concat(<?php echo json_encode($sendInfo); ?>);
                 //window.location = "users/register";
-                else{
               $.ajax({
               type: 'post',
               dataType: 'text',
