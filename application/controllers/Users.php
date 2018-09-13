@@ -36,7 +36,7 @@
 			} else {
 				// Encrypt password
 				$enc_password = md5($this->input->post('password'));
-				//$this->user_model->register($enc_password);
+				$this->LoginModel->register($enc_password);
 				// Set message
 				$this->session->set_flashdata('user_registered', 'You are now registered and can log in');
 				redirect('index.php/send');

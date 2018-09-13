@@ -5,7 +5,7 @@ Class LoginModel extends CI_Model {
 public function registration_insert($data) {
 
 // Query to check whether username already exist or not
-$condition = "username =" . "'" . $data['username'] . "'";
+$condition = "email =" . "'" . $data['email'] . "'";
 $this->db->select('*');
 $this->db->from('user');
 $this->db->where($condition);
