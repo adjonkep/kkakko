@@ -335,8 +335,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               dataType: 'text',
               url: 'users/register',
               data: vm.sendingInfo,
-              cache: false,
               success: function(data, textStatus, jQxhr){
+                window.location = "users/register";
               },
               })
               }
