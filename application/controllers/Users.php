@@ -13,6 +13,8 @@
 			// Load session library
 			$this->load->library('session');
 			
+			$this->load->database();
+			
 			// Load database
 			$this->load->model('LoginModel');
 			}
