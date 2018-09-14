@@ -1,10 +1,9 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+defined('BASEPATH') or exit('No direct script access allowed');?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
 if (isset($this->session->userdata['logged_in'])) {
-
 
 }
 ?>
@@ -38,16 +37,16 @@ if (isset($this->session->userdata['logged_in'])) {
 
     <?php
 if (isset($logout_message)) {
-echo "<div class='message'>";
-echo $logout_message;
-echo "</div>";
+    echo "<div class='message'>";
+    echo $logout_message;
+    echo "</div>";
 }
 ?>
 <?php
 if (isset($message_display)) {
-echo "<div class='message'>";
-echo $message_display;
-echo "</div>";
+    echo "<div class='message'>";
+    echo $message_display;
+    echo "</div>";
 }
 ?>
 <div id="main">
@@ -58,7 +57,7 @@ echo "</div>";
 <?php
 echo "<div class='error_msg'>";
 if (isset($error_message)) {
-echo $error_message;
+    echo $error_message;
 }
 echo validation_errors();
 echo "</div>";
@@ -72,14 +71,14 @@ echo "</div>";
 <?php echo form_close(); ?>
 </div>
 </div>
-       
+
     <footer>
       <div class="footer-div">
       <div class="footer-left">
         <p class="listing-left">
           <a>The Journey of kkakko</a>
           <a>About Us</a>
-          <a>Contact Us</a>          
+          <a>Contact Us</a>
           <a>The Contract</a>
           <a>The Pricing</a>
         </p>
@@ -115,9 +114,9 @@ echo "</div>";
       xfbml      : true,
       version    : 'v3.1'
     });
-      
-    FB.AppEvents.logPageView();   
-      
+
+    FB.AppEvents.logPageView();
+
   };
 
   (function(d, s, id){

@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+defined('BASEPATH') or exit('No direct script access allowed');?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,25 +36,24 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     </header>
 
     <!-- To Gather User Info -->
-    <?php 
-      $sendInfo= array();
-    ?>
+    <?php
+$sendInfo = array();
+?>
 
     <?php
-    if (isset($_POST['parcel'])) {
-        $type = $_POST['parcel'];
-        $sendInfo[0] = $type;
-    }
-    elseif (isset($_POST['courier'])) {
-      $type = $_POST['courier'];
-      $sendInfo[0] = $type;
-    }
-    ?>
+if (isset($_POST['parcel'])) {
+    $type = $_POST['parcel'];
+    $sendInfo[0] = $type;
+} elseif (isset($_POST['courier'])) {
+    $type = $_POST['courier'];
+    $sendInfo[0] = $type;
+}
+?>
 
     <div id ="app">
       <button class="btn btn-primary" v-on:click="goBack()"><i class="fa fa-arrow-left"></i> Return</button>
       <div id="invoice-div">
-        <p align="center">I want to send a <b><?php if(isset($type)){ echo $type;} ?></b></p>
+        <p align="center">I want to send a <b><?php if (isset($type)) {echo $type;}?></b></p>
       </div>
       <form id="from-to-form" align="center" onsubmit="return false;">
         <h3>Origin and Destination</h3>
@@ -72,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
         <h3>Volume and Weight</h3>
         <div id="volume-div">
           <a>Volume</a>
-          <input type="range" min="1" max="100" value="50" class="slider" id="volume-slider"> 
+          <input type="range" min="1" max="100" value="50" class="slider" id="volume-slider">
           <a>Cm3</a>
         </div>
         <div id="weight-div">
@@ -114,14 +113,14 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
       <form id="order-form" align="center" style="display:none;" onsubmit="return false;">
         <button class="btn btn-primary" id="order-button" v-on:click="loginStatus()">Confirm Order</button>
       </form>
-    </div>    
+    </div>
     <footer>
       <div class="footer-div">
       <div class="footer-left">
         <p class="listing-left">
           <a>The Journey of kkakko</a>
           <a>About Us</a>
-          <a>Contact Us</a>          
+          <a>Contact Us</a>
           <a>The Contract</a>
           <a>The Pricing</a>
         </p>
@@ -151,7 +150,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
-    
+
 
     <script>
 
@@ -162,8 +161,8 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
       var vm = new Vue({
           el: '#app',
-          data: { 
-              cities: <?php echo json_encode($infos)?>,
+          data: {
+              cities: <?php echo json_encode($infos) ?>,
               navigationStackElements: [],
               navigationStackParagraphs: [],
               sendingInfo: []
@@ -192,7 +191,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               vm.navigationStackElements.push($("#from-to-form"));
               vm.navigationStackParagraphs.push($("#from-to"));
               vm.navigationStackElements.push($("#volume-weight-form"));
-             
+
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -216,7 +215,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               vm.sendingInfo[2] = weight;
               vm.navigationStackElements.push($("#containing-form"));
               vm.navigationStackParagraphs.push($("#volume-weight"));
-              
+
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -225,7 +224,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
             },
             containingEnter: function(){
               var selected = [];
-              $.each($("input[name='content']:checked"), function(){            
+              $.each($("input[name='content']:checked"), function(){
                 selected.push($(this).val());
               });
               if (selected.length == 0){
@@ -246,7 +245,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               vm.sendingInfo[3] = selected;
               vm.navigationStackElements.push($("#value-form"));
               vm.navigationStackParagraphs.push($("#containing"));
-              
+
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -275,7 +274,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               vm.sendingInfo[4] = value;
               vm.navigationStackElements.push($("#shipping-form"));
               vm.navigationStackParagraphs.push($("#value"));
-              
+
               },
               error: function( jqXhr, textStatus, errorThrown ){
               console.log( errorThrown );
@@ -322,21 +321,21 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
               }
             },
             loginStatus: function(){
-              var status = "<?php echo $this->session->userdata('logged_in');?>";
+              var status = "<?php echo $this->session->userdata('logged_in'); ?>";
               if (status == 1){
                 alert("user logged in!");
               }
               else if(status == ""){
-                vm.sendingInfo.concat(<?php echo json_encode($sendInfo); ?>);
+                infoData = vm.sendingInfo.concat(<?php echo json_encode($sendInfo); ?>);
                 //window.location = "users/register";
-              $.ajax({
-              type: 'post',
-              dataType: 'text',
-              url: 'users/register',
-              data: vm.sendingInfo,
-              success: function(data, textStatus, jQxhr){
-                window.location = "users/register";
-              },
+                $.ajax({
+                type: 'post',
+                dataType: 'text',
+                url: 'users/register',
+                data: infoData,
+                success: function(data, textStatus, jQxhr){
+                 //window.location = "users/register";
+                },
               })
               }
             }
