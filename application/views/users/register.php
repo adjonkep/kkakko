@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+defined('BASEPATH') or exit('No direct script access allowed');?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,37 +44,37 @@ echo form_open('index.php/users/register');
 //echo form_input('username');
 echo "<div class='error_msg'>";
 if (isset($message_display)) {
-echo $message_display;
+    echo $message_display;
 }
 echo "</div>";
-echo"<br/>";
+echo "<br/>";
 echo form_label('Email : ');
-echo"<br/>";
+echo "<br/>";
 echo form_input('email');
-echo"<br/>";
-echo"<br/>";
+echo "<br/>";
+echo "<br/>";
 echo form_label('Password : ');
-echo"<br/>";
+echo "<br/>";
 echo form_password('password');
-echo"<br/>";
+echo "<br/>";
 echo form_label('Confirm Password : ');
-echo"<br/>";
+echo "<br/>";
 echo form_password('password2');
-echo"<br/>";
-echo"<br/>";
+echo "<br/>";
+echo "<br/>";
 echo form_submit('submit', 'Sign Up');
 echo form_close();
 ?>
 <a href="<?php echo base_url() ?>index.php/login">For Login Click Here</a>
 </div>
-</div> 
+</div>
     <footer>
       <div class="footer-div">
       <div class="footer-left">
         <p class="listing-left">
           <a>The Journey of kkakko</a>
           <a>About Us</a>
-          <a>Contact Us</a>          
+          <a>Contact Us</a>
           <a>The Contract</a>
           <a>The Pricing</a>
         </p>
@@ -110,9 +110,9 @@ echo form_close();
       xfbml      : true,
       version    : 'v3.1'
     });
-      
-    FB.AppEvents.logPageView();   
-      
+
+    FB.AppEvents.logPageView();
+
   };
 
   (function(d, s, id){

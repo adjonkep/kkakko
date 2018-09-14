@@ -334,7 +334,7 @@ if (isset($_POST['parcel'])) {
                 url: 'users/register',
                 data: infoData,
                 success: function(data, textStatus, jQxhr){
-                 //window.location = "users/register";
+                 window.location = "users/register";
                 },
               })
               }
