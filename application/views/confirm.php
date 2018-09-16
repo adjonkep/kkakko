@@ -1,6 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed'); 
-session_start();?>
+defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,6 +36,7 @@ session_start();?>
       <h3 align="center">Bienvenue sur <span class="logo-inside"><img alt="KkakKo Logo" class="img-responsive" src="<?php echo base_url(); ?>assets/images/kkakko.png"/></span>,</br>Votre nouvelle fa&ccedil;on d&#39;exp&eacute;dier courriers et petits colis &agrave; travers le monde.</h3>
     </div>
     <h3><?php echo $email;?></h3>
+    <h3><?php echo $_SESSION["logged_in"]?></h3>
     <ul>
         <?php foreach ($_SESSION["sendInfo"] as $item):?>
 
