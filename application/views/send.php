@@ -331,11 +331,10 @@ if (isset($_POST['parcel'])) {
                 $.ajax({
                 type: 'post',
                 dataType: 'text',
-                url: 'users/register',
+                url: 'send',
                 data: infoData,
                 success: function(data, textStatus, jQxhr){
-                 window.location = "users/register";
-                 
+                 window.location = "users/register";                 
                 },
               })
               }
