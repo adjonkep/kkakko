@@ -53,11 +53,8 @@ class Users extends CI_Controller
                 //$_SESSION["sendInfo"] == $_POST['infoData'];
                 $this->Confirm->index();
             } else {
-				//$this->load->view('confirm', $data);
-				
-                $_SESSION["logged_in"] == true;
-                $_SESSION["sendInfo"] == $_POST['infoData'];
-                $this->Confirm->index();
+				$_SESSION["logged_in"] == true;
+				$this->load->view('confirm');
             }
             // Set message
             //$this->session->set_flashdata('user_registered', 'You are now registered and can log in');
