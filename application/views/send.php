@@ -342,6 +342,9 @@ if (isset($_POST['parcel'])) {
           }
       })
     </script>
-    <?php $_SESSION["sendInfo"] == $_POST["infoData"];?>
+    <?php 
+    if (isset($_POST["infoData"])) {
+      $_SESSION["sendInfo"] == $_POST["infoData"];
+  } ?>
   </body>
 </html>
