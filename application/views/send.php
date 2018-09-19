@@ -335,7 +335,7 @@ if (isset($_POST['parcel'])) {
                 data: infoData,
                 success: function(data, textStatus, jQxhr){
                  window.location = "users/register";
-                 <?php $_SESSION["sendInfo"] == $_POST["infoData"];?>
+                 
                 },
               })
               }
@@ -343,5 +343,6 @@ if (isset($_POST['parcel'])) {
           }
       })
     </script>
+    <?php $_SESSION["sendInfo"] == $_POST["infoData"];?>
   </body>
 </html>
