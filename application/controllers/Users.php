@@ -13,7 +13,8 @@ class Users extends CI_Controller
         $this->load->library('form_validation');
 
         // Load session library
-        $this->load->library('session');
+		$this->load->library('session');
+		$this->load->library('../controllers/Confirm');
 
         $this->load->database();
 
@@ -54,7 +55,7 @@ class Users extends CI_Controller
                 $this->Confirm->index();
             } else {
 				//$this->load->view('confirm', $data);
-				$this->load->library('../controllers/Confirm');
+				
                 $_SESSION["logged_in"] == true;
                 $_SESSION["sendInfo"] == $_POST['infoData'];
                 $this->Confirm->index();
