@@ -48,9 +48,10 @@ class Users extends CI_Controller
             );
             $result = $this->LoginModel->registration_insert($data);
             if ($result == true) {
+				$this->load->library('../controllers/Confirm');
                 $_SESSION["logged_in"] == true;
                 $_SESSION["sendInfo"] == $_POST['infoData'];
-                $this->load->view('confirm', $data);
+                $this->Confirm->index();
             } else {
                 $this->load->view('confirm', $data);
             }
