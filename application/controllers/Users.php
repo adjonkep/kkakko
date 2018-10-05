@@ -14,7 +14,7 @@ class Users extends CI_Controller
 
         // Load session library
 		$this->load->library('session');
-		$this->load->library('../controllers/Confirm');
+		$this->load->library('Confirm');
 
         $this->load->database();
 
